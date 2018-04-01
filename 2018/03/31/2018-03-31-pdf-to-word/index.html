@@ -107,7 +107,7 @@
 <meta property="og:site_name" content="学而勤习之">
 <meta property="og:description" content="人生苦短，我用Python。把PDF文件转换为Word实在是一件苦恼的事，虽然网上有很多工具可以做到，但是要么收费，要么转换效果不好，并且每次只能一个一个的转换，十分低效。作为“万能”的Python，短短几十行的代码就可以帮助我们搞定这个问题。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-03-31T14:25:30.242Z">
+<meta property="og:updated_time" content="2018-04-01T09:16:48.030Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="《Pytho大法好》之一：批量PDF转Word">
 <meta name="twitter:description" content="人生苦短，我用Python。把PDF文件转换为Word实在是一件苦恼的事，虽然网上有很多工具可以做到，但是要么收费，要么转换效果不好，并且每次只能一个一个的转换，十分低效。作为“万能”的Python，短短几十行的代码就可以帮助我们搞定这个问题。">
@@ -426,8 +426,7 @@
 <li>批量处理</li>
 <li>多线程提高效率</li>
 </ul>
-<h1 id="代码实现"><a href="#代码实现" class="headerlink" title="代码实现"></a>代码实现</h1><p>##1.读取PDF</p>
-<pre><code>from pdfminer.pdfinterp import PDFResourceManager
+<h1 id="代码实现"><a href="#代码实现" class="headerlink" title="代码实现"></a>代码实现</h1><h2 id="1-读取PDF"><a href="#1-读取PDF" class="headerlink" title="1.读取PDF"></a>1.读取PDF</h2><pre><code>from pdfminer.pdfinterp import PDFResourceManager
 from pdfminer.pdfinterp import process_pdf
 from pdfminer.converter import TextConverter
 from pdfminer.layout import LAParams
@@ -446,8 +445,7 @@ device.close()
 content = return_str.getvalue()
 return_str.close()
 return content
-</code></pre><p>##2.写入Word</p>
-<pre><code>from docx import Document
+</code></pre><h2 id="2-写入Word"><a href="#2-写入Word" class="headerlink" title="2.写入Word"></a>2.写入Word</h2><pre><code>from docx import Document
 def save_text_to_word(content, file_path):
 doc = Document()
 for line in content.split(&apos;\n&apos;):
@@ -458,12 +456,10 @@ doc.save(file_path)
 def remove_control_characters(content):
 mpa = dict.fromkeys(range(32))
 return content.translate(mpa)
-</code></pre><p>##3.PDF转换为Word</p>
-<pre><code>def pdf_to_word(pdf_file_path, word_file_path):
+</code></pre><h2 id="3-PDF转换为Word"><a href="#3-PDF转换为Word" class="headerlink" title="3.PDF转换为Word"></a>3.PDF转换为Word</h2><pre><code>def pdf_to_word(pdf_file_path, word_file_path):
 content = read_from_pdf(pdf_file_path)
 save_text_to_word(content, word_file_path)
-</code></pre><p>##4.多线程提高效率</p>
-<pre><code>from concurrent.futures import ProcessPoolExecutor
+</code></pre><h2 id="4-多线程提高效率"><a href="#4-多线程提高效率" class="headerlink" title="4.多线程提高效率"></a>4.多线程提高效率</h2><pre><code>from concurrent.futures import ProcessPoolExecutor
 tasks = []
 with ProcessPoolExecutor(max_workers=int(config[&apos;max_worker&apos;])) as executor:
 for file in os.listdir(config[&apos;pdf_folder&apos;]):
@@ -484,8 +480,7 @@ exit_flag = False
 if exit_flag:
 print(&apos;完成&apos;)
 exit(0)
-</code></pre><p>##5.完整实现代码</p>
-<pre><code>    import os
+</code></pre><h2 id="5-完整实现代码"><a href="#5-完整实现代码" class="headerlink" title="5.完整实现代码"></a>5.完整实现代码</h2><pre><code>    import os
 from configparser import ConfigParser
 from io import StringIO
 from io import open
@@ -795,7 +790,7 @@ var jiathis_config={
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">6</span>
+                  <span class="site-state-item-count">9</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -856,7 +851,7 @@ var jiathis_config={
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#所需工具"><span class="nav-number">1.</span> <span class="nav-text">所需工具</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#整体思路"><span class="nav-number">2.</span> <span class="nav-text">整体思路</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#代码实现"><span class="nav-number">3.</span> <span class="nav-text">代码实现</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#特别注意"><span class="nav-number">4.</span> <span class="nav-text">特别注意</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#所需工具"><span class="nav-number">1.</span> <span class="nav-text">所需工具</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#整体思路"><span class="nav-number">2.</span> <span class="nav-text">整体思路</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#代码实现"><span class="nav-number">3.</span> <span class="nav-text">代码实现</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-读取PDF"><span class="nav-number">3.1.</span> <span class="nav-text">1.读取PDF</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-写入Word"><span class="nav-number">3.2.</span> <span class="nav-text">2.写入Word</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-PDF转换为Word"><span class="nav-number">3.3.</span> <span class="nav-text">3.PDF转换为Word</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-多线程提高效率"><span class="nav-number">3.4.</span> <span class="nav-text">4.多线程提高效率</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-完整实现代码"><span class="nav-number">3.5.</span> <span class="nav-text">5.完整实现代码</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#特别注意"><span class="nav-number">4.</span> <span class="nav-text">特别注意</span></a></li></ol></div>
             
 
           </div>
