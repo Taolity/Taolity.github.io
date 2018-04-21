@@ -88,7 +88,7 @@
 
 
 
-  <meta name="keywords" content="Python,工具," />
+  <meta name="keywords" content="求知,学习笔记," />
 
 
 
@@ -99,18 +99,18 @@
 
 
 
-<meta name="description" content="人生苦短，我用Python。把PDF文件转换为Word实在是一件苦恼的事，虽然网上有很多工具可以做到，但是要么收费，要么转换效果不好，并且每次只能一个一个的转换，十分低效。作为“万能”的Python，短短几十行的代码就可以帮助我们搞定这个问题。">
-<meta name="keywords" content="Python,工具">
+<meta name="description" content="万丈高楼平地起，夯实基础为第一。">
+<meta name="keywords" content="求知,学习笔记">
 <meta property="og:type" content="article">
-<meta property="og:title" content="《Pytho大法好》之一：批量PDF转Word">
-<meta property="og:url" content="http://wanghailin.info/2018/03/31/2018-03-31-pdf-to-word/index.html">
+<meta property="og:title" content="git基本命令使用（一）">
+<meta property="og:url" content="http://wanghailin.info/2018/04/17/2018-04-17-git-command/index.html">
 <meta property="og:site_name" content="学而勤习之">
-<meta property="og:description" content="人生苦短，我用Python。把PDF文件转换为Word实在是一件苦恼的事，虽然网上有很多工具可以做到，但是要么收费，要么转换效果不好，并且每次只能一个一个的转换，十分低效。作为“万能”的Python，短短几十行的代码就可以帮助我们搞定这个问题。">
+<meta property="og:description" content="万丈高楼平地起，夯实基础为第一。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-04-01T09:16:48.030Z">
+<meta property="og:updated_time" content="2018-04-21T11:42:30.870Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="《Pytho大法好》之一：批量PDF转Word">
-<meta name="twitter:description" content="人生苦短，我用Python。把PDF文件转换为Word实在是一件苦恼的事，虽然网上有很多工具可以做到，但是要么收费，要么转换效果不好，并且每次只能一个一个的转换，十分低效。作为“万能”的Python，短短几十行的代码就可以帮助我们搞定这个问题。">
+<meta name="twitter:title" content="git基本命令使用（一）">
+<meta name="twitter:description" content="万丈高楼平地起，夯实基础为第一。">
 
 
 
@@ -140,13 +140,13 @@
 
 
 
-  <link rel="canonical" href="http://wanghailin.info/2018/03/31/2018-03-31-pdf-to-word/"/>
+  <link rel="canonical" href="http://wanghailin.info/2018/04/17/2018-04-17-git-command/"/>
 
 
 
 
 
-  <title>《Pytho大法好》之一：批量PDF转Word | 学而勤习之</title>
+  <title>git基本命令使用（一） | 学而勤习之</title>
   
 
 
@@ -283,7 +283,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://wanghailin.info/2018/03/31/2018-03-31-pdf-to-word/">
+    <link itemprop="mainEntityOfPage" href="http://wanghailin.info/2018/04/17/2018-04-17-git-command/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Hailin">
@@ -300,7 +300,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">《Pytho大法好》之一：批量PDF转Word</h1>
+          <h1 class="post-title" itemprop="name headline">git基本命令使用（一）</h1>
         
 
         <div class="post-meta">
@@ -312,8 +312,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-03-31T00:00:00+08:00">
-                2018-03-31
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-04-17T00:00:00+08:00">
+                2018-04-17
               </time>
             
 
@@ -335,8 +335,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/技术/" itemprop="url" rel="index">
-                    <span itemprop="name">技术</span>
+                  <a href="/categories/笔记/" itemprop="url" rel="index">
+                    <span itemprop="name">笔记</span>
                   </a>
                 </span>
 
@@ -371,7 +371,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  601
+                  903
                 </span>
               
 
@@ -395,7 +395,7 @@
 
           
               <div class="post-description">
-                  人生苦短，我用Python。把PDF文件转换为Word实在是一件苦恼的事，虽然网上有很多工具可以做到，但是要么收费，要么转换效果不好，并且每次只能一个一个的转换，十分低效。作为“万能”的Python，短短几十行的代码就可以帮助我们搞定这个问题。
+                  万丈高楼平地起，夯实基础为第一。
               </div>
           
 
@@ -413,157 +413,73 @@
 
       
         <a id="more"></a> 
-<h1 id="所需工具"><a href="#所需工具" class="headerlink" title="所需工具"></a>所需工具</h1><ul>
-<li><p>python 3.6.1</p>
-</li>
-<li><p>pdfminer3k</p>
+<p>1.基本配置</p>
+<ul>
+<li>git全局配置文件 命令：git config –global &lt;配置名称&gt;&lt;配置的值&gt;  </li>
+<li>可使用 ls -al 或者是cat ~/.gitconfig 查看配置文件</li>
+</ul>
+<p>2.clone一个仓库</p>
+<ul>
+<li>git clone <a href="https://github.com/username/仓库名" target="_blank" rel="noopener">https://github.com/username/仓库名</a> </li>
+<li>git init 初始化仓库</li>
+</ul>
+<p>3.正常的工作流程<br>git的基本流程如下：</p>
+<ul>
+<li>创建或修改文件</li>
+<li>使用git add命令添加新创建或修改的文件到本地的缓存区（Index）</li>
+<li>使用git commit命令提交到本地代码库</li>
+<li><p>（可选，有的时候并没有可以同步的远端代码库）使用git push命令将本地代码库同步到远端代码库</p>
+<p>echo “添加内容”&gt;&gt; 文件名<br>git status 查看当前git仓库的状态<br>git diff –cached 查看缓存区中的那些文件被修改</p>
 </li>
 </ul>
-<h1 id="整体思路"><a href="#整体思路" class="headerlink" title="整体思路"></a>整体思路</h1><ul>
-<li>单个文件处理</li>
-<li>读取PDF文件</li>
-<li>写入Word文件</li>
-<li>批量处理</li>
-<li>多线程提高效率</li>
+<p>5.分支与合并</p>
+<p>分支</p>
+<blockquote>
+<p>Git的分支可以让你在主线（master分支）之外进行代码提交，同时又不会影响代码库主线。分支的作用体现在多人协作开发中，比如一个团队开发软件，你负责独立的一个功能需要一个月的时间来完成，你就可以创建一个分支，只把该功能的代码提交到这个分支，而其他同事仍然可以继续使用主线开发，你每天的提交不会对他们造成任何影响。当你完成功能后，测试通过再把你的功能分支合并到主线。</p>
+</blockquote>
+<ul>
+<li>git branch 分支名  创建分支</li>
+<li>git checkout 分支名  切换到其他分支</li>
+<li>git branch -d  只能删除那些已经被当前分支的合并的分支.</li>
+<li>git branch –D  强制删除某个分支</li>
 </ul>
-<h1 id="代码实现"><a href="#代码实现" class="headerlink" title="代码实现"></a>代码实现</h1><h2 id="1-读取PDF"><a href="#1-读取PDF" class="headerlink" title="1.读取PDF"></a>1.读取PDF</h2><pre><code>from pdfminer.pdfinterp import PDFResourceManager
-from pdfminer.pdfinterp import process_pdf
-from pdfminer.converter import TextConverter
-from pdfminer.layout import LAParams
-
-def read_from_pdf(file_path):
-with open(file_path, &apos;rb&apos;) as file:
-resource_manager = PDFResourceManager()
-return_str = StringIO()
-lap_params = LAParams()
-
-device = TextConverter(
-resource_manager, return_str, laparams=lap_params)
-process_pdf(resource_manager, device, file)
-device.close()
-
-content = return_str.getvalue()
-return_str.close()
-return content
-</code></pre><h2 id="2-写入Word"><a href="#2-写入Word" class="headerlink" title="2.写入Word"></a>2.写入Word</h2><pre><code>from docx import Document
-def save_text_to_word(content, file_path):
-doc = Document()
-for line in content.split(&apos;\n&apos;):
-paragraph = doc.add_paragraph()
-paragraph.add_run(remove_control_characters(line))
-doc.save(file_path)
-
-def remove_control_characters(content):
-mpa = dict.fromkeys(range(32))
-return content.translate(mpa)
-</code></pre><h2 id="3-PDF转换为Word"><a href="#3-PDF转换为Word" class="headerlink" title="3.PDF转换为Word"></a>3.PDF转换为Word</h2><pre><code>def pdf_to_word(pdf_file_path, word_file_path):
-content = read_from_pdf(pdf_file_path)
-save_text_to_word(content, word_file_path)
-</code></pre><h2 id="4-多线程提高效率"><a href="#4-多线程提高效率" class="headerlink" title="4.多线程提高效率"></a>4.多线程提高效率</h2><pre><code>from concurrent.futures import ProcessPoolExecutor
-tasks = []
-with ProcessPoolExecutor(max_workers=int(config[&apos;max_worker&apos;])) as executor:
-for file in os.listdir(config[&apos;pdf_folder&apos;]):
-extension_name = os.path.splitext(file)[1]
-if extension_name != &apos;.pdf&apos;:
-continue
-file_name = os.path.splitext(file)[0]
-pdf_file = config[&apos;pdf_folder&apos;] + &apos;/&apos; + file
-word_file = config[&apos;word_folder&apos;] + &apos;/&apos; + file_name + &apos;.docx&apos;
-print(&apos;正在处理: &apos;, file)
-result = executor.submit(pdf_to_word, pdf_file, word_file)
-tasks.append(result)
-while True:
-exit_flag = True
-for task in tasks:
-if not task.done():
-exit_flag = False
-if exit_flag:
-print(&apos;完成&apos;)
-exit(0)
-</code></pre><h2 id="5-完整实现代码"><a href="#5-完整实现代码" class="headerlink" title="5.完整实现代码"></a>5.完整实现代码</h2><pre><code>    import os
-from configparser import ConfigParser
-from io import StringIO
-from io import open
-from concurrent.futures import ProcessPoolExecutor
-
-from pdfminer.pdfinterp import PDFResourceManager
-from pdfminer.pdfinterp import process_pdf
-from pdfminer.converter import TextConverter
-from pdfminer.layout import LAParams
-from docx import Document
-
-
-def read_from_pdf(file_path):
-with open(file_path, &apos;rb&apos;) as file:
-resource_manager = PDFResourceManager()
-return_str = StringIO()
-lap_params = LAParams()
-
-device = TextConverter(
-resource_manager, return_str, laparams=lap_params)
-process_pdf(resource_manager, device, file)
-device.close()
-
-content = return_str.getvalue()
-return_str.close()
-return content
-
-
-def save_text_to_word(content, file_path):
-doc = Document()
-for line in content.split(&apos;\n&apos;):
-paragraph = doc.add_paragraph()
-paragraph.add_run(remove_control_characters(line))
-doc.save(file_path)
-
-
-def remove_control_characters(content):
-mpa = dict.fromkeys(range(32))
-return content.translate(mpa)
-
-
-def pdf_to_word(pdf_file_path, word_file_path):
-content = read_from_pdf(pdf_file_path)
-save_text_to_word(content, word_file_path)
-
-
-def main():
-config_parser = ConfigParser()
-config_parser.read(&apos;config.cfg&apos;)
-config = config_parser[&apos;default&apos;]
-
-tasks = []
-with ProcessPoolExecutor(max_workers=int(config[&apos;max_worker&apos;])) as executor:
-for file in os.listdir(config[&apos;pdf_folder&apos;]):
-extension_name = os.path.splitext(file)[1]
-if extension_name != &apos;.pdf&apos;:
-continue
-file_name = os.path.splitext(file)[0]
-pdf_file = config[&apos;pdf_folder&apos;] + &apos;/&apos; + file
-word_file = config[&apos;word_folder&apos;] + &apos;/&apos; + file_name + &apos;.docx&apos;
-print(&apos;正在处理: &apos;, file)
-result = executor.submit(pdf_to_word, pdf_file, word_file)
-tasks.append(result)
-while True:
-exit_flag = True
-for task in tasks:
-if not task.done():
-exit_flag = False
-if exit_flag:
-print(&apos;完成&apos;)
-exit(0)
-
-
-if __name__ == &apos;__main__&apos;:
-main()
-</code></pre><p><em>具体使用可参考 <a href="https://github.com/hailln/pdf2word" target="_blank" rel="noopener">GitHub</a></em>  </p>
-<h1 id="特别注意"><a href="#特别注意" class="headerlink" title="特别注意"></a>特别注意</h1><p>  1.部分PDF转换Word不成功是因为缺少字体的原因，需要下载相应的字体包放到相应位置</p>
-<p>  2.PDF中的图片不能转换</p>
-<p>  踩了许多坑，十分感谢各位前辈的探索，站在巨人的肩膀上才能看得更远！</p>
-<p><strong>参考资料</strong></p>
-<p>1.<a href="http://www.simpleapples.com/2018/03/03/60-lines-code-to-convert-pdf-to-word/" target="_blank" rel="noopener">60行Python代码，实现多线程PDF转Word</a></p>
-<p>2.<a href="https://ask.hellobi.com/blog/python_shequ/11570" target="_blank" rel="noopener">手把手|20行Python代码教你批量将PDF文件转为Word格式（包教包会）</a></p>
-<p>3.<a href="https://github.com/jaepil/pdfminer3k" target="_blank" rel="noopener">pdfminer3k 使用文档</a></p>
+<p>合并</p>
+<ul>
+<li>git reset –hard HEAD^ 撤销合并<blockquote>
+<p>快速向前合并<br>还有一种需要特殊对待的情况，在前面没有提到。通常，一个合并会产生一个合并提交(commit), 把两个父分支里的每一行内容都合并进来。<br>但是，如果当前的分支和另一个分支没有内容上的差异，就是说当前分支的每一个提交(commit)都已经存在另一个分支里了，git 就会执行一个“快速向前”(fast forward)操作；git 不创建任何新的提交(commit),只是将当前分支指向合并进来的分支。</p>
+</blockquote>
+</li>
+</ul>
+<p>6.git 日志</p>
+<ul>
+<li>git log 查看日志</li>
+<li>git log –stat 日志统计</li>
+<li>git log –pretty=oneline 或 git log –pretty=short pretty参数可以使用若干表现格式<blockquote>
+<p>你也可用medium,full,fuller,email 或raw。 如果这些格式不完全符合你的需求， 你也可以用–pretty=format参数定义格式。</p>
+</blockquote>
+</li>
+</ul>
+<blockquote>
+<p>–graph 选项可以可视化你的提交图(commit graph)，会用ASCII字符来画出一个很漂亮的提交历史(commit history)线<br>日志记录可以按不同的顺序来显示。如果你要指定一个特定的顺序，可以为git log命令添加顺序参数。</p>
+</blockquote>
+<p>按默认情况，提交会按逆时间顺序显示，可以指定–topo-order参数，让提交按拓扑顺序来显示(就是子提交在它们的父提交前显示):</p>
+<blockquote>
+<p>$ git log –pretty=format:’%h : %s’ –topo-order –graph<br>也可以使用 –reverse参数来逆向显示所有提交日志</p>
+</blockquote>
+<h2 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h2><ul>
+<li>git config：配置相关信息</li>
+<li>git clone：复制仓库</li>
+<li>git init：初始化仓库</li>
+<li>git add：添加更新内容到索引中</li>
+<li>git diff：比较内容</li>
+<li>git status：获取当前项目状况</li>
+<li>git commit：提交</li>
+<li>git branch：分支相关</li>
+<li>git checkout：切换分支</li>
+<li>git merge：合并分支</li>
+<li>git reset：恢复版本</li>
+<li>git log：查看日志</li>
+</ul>
 
       
     </div>
@@ -623,7 +539,7 @@ main()
   </li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="http://wanghailin.info/2018/03/31/2018-03-31-pdf-to-word/" title="《Pytho大法好》之一：批量PDF转Word">http://wanghailin.info/2018/03/31/2018-03-31-pdf-to-word/</a>
+    <a href="http://wanghailin.info/2018/04/17/2018-04-17-git-command/" title="git基本命令使用（一）">http://wanghailin.info/2018/04/17/2018-04-17-git-command/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>
@@ -638,9 +554,9 @@ main()
       
         <div class="post-tags">
           
-            <a href="/tags/Python/" rel="tag"> <i class="fa fa-tag"></i> Python</a>
+            <a href="/tags/求知/" rel="tag"> <i class="fa fa-tag"></i> 求知</a>
           
-            <a href="/tags/工具/" rel="tag"> <i class="fa fa-tag"></i> 工具</a>
+            <a href="/tags/学习笔记/" rel="tag"> <i class="fa fa-tag"></i> 学习笔记</a>
           
         </div>
       
@@ -653,8 +569,8 @@ main()
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/03/20/2018-03-20-data-analyst-interview-algorithm/" rel="next" title="数据分析之路|面试题整理之常见算法篇">
-                <i class="fa fa-chevron-left"></i> 数据分析之路|面试题整理之常见算法篇
+              <a href="/2018/04/13/2018-04-13-qiao-ji-36-ji/" rel="next" title="三十六计，巧藏诗中">
+                <i class="fa fa-chevron-left"></i> 三十六计，巧藏诗中
               </a>
             
           </div>
@@ -663,8 +579,8 @@ main()
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2018/04/13/2018-04-13-qiao-ji-36-ji/" rel="prev" title="三十六计，巧藏诗中">
-                三十六计，巧藏诗中 <i class="fa fa-chevron-right"></i>
+              <a href="/2018/04/21/2018-04-21-not-forget-why-go/" rel="prev" title="读《不要因为走得太远而忘记为什么出发》">
+                读《不要因为走得太远而忘记为什么出发》 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -855,7 +771,7 @@ var jiathis_config={
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#所需工具"><span class="nav-number">1.</span> <span class="nav-text">所需工具</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#整体思路"><span class="nav-number">2.</span> <span class="nav-text">整体思路</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#代码实现"><span class="nav-number">3.</span> <span class="nav-text">代码实现</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-读取PDF"><span class="nav-number">3.1.</span> <span class="nav-text">1.读取PDF</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-写入Word"><span class="nav-number">3.2.</span> <span class="nav-text">2.写入Word</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-PDF转换为Word"><span class="nav-number">3.3.</span> <span class="nav-text">3.PDF转换为Word</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-多线程提高效率"><span class="nav-number">3.4.</span> <span class="nav-text">4.多线程提高效率</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-完整实现代码"><span class="nav-number">3.5.</span> <span class="nav-text">5.完整实现代码</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#特别注意"><span class="nav-number">4.</span> <span class="nav-text">特别注意</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#小结"><span class="nav-number">1.</span> <span class="nav-text">小结</span></a></li></ol></div>
             
 
           </div>

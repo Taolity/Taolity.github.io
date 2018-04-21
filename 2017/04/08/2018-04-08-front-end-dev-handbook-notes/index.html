@@ -1,0 +1,1145 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+<script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
+<link href="//cdn.bootcss.com/pace/1.0.2/themes/pink/pace-theme-flash.css" rel="stylesheet">
+
+<script>
+    (function(){
+        if(''){
+            if (prompt('请输入文章密码') !== ''){
+                alert('密码错误！');
+                history.back();
+            }
+        }
+    })();
+</script>
+
+
+  
+  
+    
+    
+  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
+  <link href="/lib/pace/pace-theme-minimal.min.css?v=1.0.2" rel="stylesheet">
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="求知,学习笔记," />
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="万丈高楼平地起，夯实基础是第一">
+<meta name="keywords" content="求知,学习笔记">
+<meta property="og:type" content="article">
+<meta property="og:title" content="前端开发者手册读书笔记">
+<meta property="og:url" content="http://wanghailin.info/2017/04/08/2018-04-08-front-end-dev-handbook-notes/index.html">
+<meta property="og:site_name" content="学而勤习之">
+<meta property="og:description" content="万丈高楼平地起，夯实基础是第一">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2018-04-21T11:47:49.497Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="前端开发者手册读书笔记">
+<meta name="twitter:description" content="万丈高楼平地起，夯实基础是第一">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":"fasle","scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://wanghailin.info/2017/04/08/2018-04-08-front-end-dev-handbook-notes/"/>
+
+
+
+
+
+  <title>前端开发者手册读书笔记 | 学而勤习之</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">学而勤习之</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">记录成就伟大</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://wanghailin.info/2017/04/08/2018-04-08-front-end-dev-handbook-notes/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Hailin">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="学而勤习之">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">前端开发者手册读书笔记</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-04-08T00:00:00+08:00">
+                2017-04-08
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/读书笔记/" itemprop="url" rel="index">
+                    <span itemprop="name">读书笔记</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+            <span class="post-meta-divider">|</span>
+            <span class="page-pv">本文总阅读量 <i class="fa fa-file-o"></i>
+            <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>次
+            </span>
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  2,458
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  10
+                </span>
+              
+            </div>
+          
+
+          
+              <div class="post-description">
+                  万丈高楼平地起，夯实基础是第一
+              </div>
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <a id="more"></a> 
+<h1 id="前端开发者手册"><a href="#前端开发者手册" class="headerlink" title="前端开发者手册"></a>前端开发者手册</h1><h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><blockquote>
+<p>1.概述并讨论了前端工程的实践，如何学习以及时间时应该使用什么工具</p>
+<p>2.目的：提供学习资料以及开发工具的专业资源，提供研究材料</p>
+<p>3.支持web技术(HTML,CSS,DOM以及JavaScript)</p>
+</blockquote>
+<h2 id="1-什么是前端开发者"><a href="#1-什么是前端开发者" class="headerlink" title="1.什么是前端开发者"></a>1.什么是前端开发者</h2><p>一个前端开发者, 要会使用Web技术(如：HTML,CSS,DOM和JavaScript)设计和开发网站应用. 网站应用, 或运行于 Web平台 之上, 或用于编译非Web平台环境的输入(如：NativeScript).</p>
+<p>Web浏览器 </p>
+<ul>
+<li><p>Chrome </p>
+</li>
+<li><p>Internet </p>
+</li>
+<li><p>Explorer </p>
+</li>
+<li><p>Firefox </p>
+</li>
+<li><p>Safari</p>
+</li>
+</ul>
+<p>无壳浏览器 </p>
+<ul>
+<li><p>PhantomJS </p>
+</li>
+<li><p>slimerjs </p>
+</li>
+<li><p>trifleJS</p>
+</li>
+</ul>
+<p>Web视图 </p>
+<ul>
+<li>Cordova (用于本地手机/平板应用)</li>
+</ul>
+<ul>
+<li>NW.js (即 Node-Webkit, 用于桌面应用)</li>
+</ul>
+<ul>
+<li>Electron (用于桌面应用)</li>
+</ul>
+<h2 id="2-前端的工作职称"><a href="#2-前端的工作职称" class="headerlink" title="2.前端的工作职称"></a>2.前端的工作职称</h2><ul>
+<li>前端开发者/工程师</li>
+<li>CSS/HTML开发者</li>
+<li>前端JavaScript开发人员</li>
+<li>前端Web设计师</li>
+<li>Web/前端用户界面开发者/工程师</li>
+<li>移动/平板前端开发者</li>
+<li>前端SEO专家</li>
+<li>前端可访问性专家</li>
+<li>前端开发运维</li>
+<li>前端测试/QA</li>
+</ul>
+<h2 id="3-前端开发者常用的网络技术"><a href="#3-前端开发者常用的网络技术" class="headerlink" title="3.前端开发者常用的网络技术"></a>3.前端开发者常用的网络技术</h2><ul>
+<li>Hyper Text Markup Language(超文本标记语言, 又称 HTML)</li>
+<li>Cascading Style Sheets (层叠式样式表, 又称 CSS)</li>
+<li>Document Object Model (文档对象模型, 又称 DOM)</li>
+<li>JavaScript Programming Language (JavaScript编程语言, 又称: - ECMAScript 6, ES6, JavaScript 2015)</li>
+<li>Web API’s (Web应用程序接口, 又称 HTML5 API 或浏览器 API)</li>
+<li>Hypertext Transfer Protocol (超文本传输协议, 又称 HTTP)</li>
+<li>Uniform Resource Locator’s (统一资源定位符, 又称 URL)</li>
+<li>JavaScript Object Notation (JavaScript对象表示, 又称 JSON)</li>
+<li>Web Content Accessibility Guidelines (网页内容无障碍设计指南, 又称 WCAG) &amp; Accessible Rich Internet Applications (Internet应用程序的无障碍设计, 又称 ARIA)</li>
+</ul>
+<h3 id="Hyper-Text-Markup-Language-超文本标记语言-又称-HTML"><a href="#Hyper-Text-Markup-Language-超文本标记语言-又称-HTML" class="headerlink" title="Hyper Text Markup Language(超文本标记语言, 又称 HTML)"></a>Hyper Text Markup Language(超文本标记语言, 又称 HTML)</h3><blockquote>
+<p>超文本标记语言, 通常被称为 HTML, 是被用于创建网页的标准标记语言. Web浏览器能将 HTML 文件渲染成可见的或者可听到的. HTML 随着线索提示, 语义化地描述了网站的结构, 使它成为一种标记语言, 而不是编程语言. - wikipedia.org</p>
+</blockquote>
+<h3 id="Cascading-Style-Sheets-层叠式样式表-又称-CSS"><a href="#Cascading-Style-Sheets-层叠式样式表-又称-CSS" class="headerlink" title="Cascading Style Sheets (层叠式样式表, 又称 CSS)"></a>Cascading Style Sheets (层叠式样式表, 又称 CSS)</h3><blockquote>
+<p>层叠式样式表(CSS)是用于描述外观和格式化标记语言编写的文档的样式表语言. 尽管经常被用来改变用 HTML 和 XHTML 编写的网页和用户界面的样式, 但也可用于任何 XML 文档, 包括纯 XML, SVG 和 XUL. 跟 JavaScript 和 HTML 一样, CSS是被大多数网站用于为Web应用程序创建富有吸引力的网页, 用户界面的一种基础技术, 也为许多移动应用程序创建用户界面. - wikipedia.org</p>
+</blockquote>
+<h3 id="Document-Object-Model-文档对象模型-又称-DOM"><a href="#Document-Object-Model-文档对象模型-又称-DOM" class="headerlink" title="Document Object Model (文档对象模型, 又称 DOM)"></a>Document Object Model (文档对象模型, 又称 DOM)</h3><blockquote>
+<p>文档对象模型用于代表和对象交互的HTML, XHTML 和 XML 文档, 是一种跨平台和语言无关性的约定. 每一份文档的所有节点被组织成一种树结构, 称为 DOM 树. DOM 对象通过使用对象上的方法被处理和操作, 一个 DOM 对象的公共接口被指定为它的应用程序编程接口(API). - wikipedia.org</p>
+</blockquote>
+<h3 id="JavaScript-Programming-Language-JavaScript编程语言-又称-ECMAScript-6-ES6-JavaScript-2015"><a href="#JavaScript-Programming-Language-JavaScript编程语言-又称-ECMAScript-6-ES6-JavaScript-2015" class="headerlink" title="JavaScript Programming Language (JavaScript编程语言, 又称: ECMAScript 6, ES6, JavaScript 2015)"></a>JavaScript Programming Language (JavaScript编程语言, 又称: ECMAScript 6, ES6, JavaScript 2015)</h3><blockquote>
+<p>JavaScript 是一种高级的, 动态的, 无类型的和解释型的编程语言, 它已经在 ECMAScript 语言规范中被标准化. 跟 HTML 和 CSS 一样, JavaScript 是 WWW 内容生成的第三种必不可少的技术; 大多数的网会使用Javascript, 并且 Javascript 被所有现在Web浏览器支持. JavaScript 基于原型和函数优先的特点, 使它成为多范型的语言, 支持面向对象的, 命令式的, 和函数式编程风格. JavaScript 能提供 API 来处理文本, 数组, 日期和正则表达式, 但不包括任何 I/O, 如网络, 存储或图形工具, 对这些的依赖取决于宿主环境中嵌入了什么. - wikipedia.org</p>
+</blockquote>
+<h3 id="Web-API’s-Web应用程序接口-又称-HTML5-API"><a href="#Web-API’s-Web应用程序接口-又称-HTML5-API" class="headerlink" title="Web API’s (Web应用程序接口, 又称 HTML5 API)"></a>Web API’s (Web应用程序接口, 又称 HTML5 API)</h3><blockquote>
+<p>当使用 JavaScript 为Web程序写代码时, 有很多不错的 API 是可以利用的. 下面列举了所有在Web APP 或网站开发中可能会用到的接口. - Mozilla</p>
+</blockquote>
+<h3 id="Hypertext-Transfer-Protocol-超文本传输协议-又称-HTTP"><a href="#Hypertext-Transfer-Protocol-超文本传输协议-又称-HTTP" class="headerlink" title="Hypertext Transfer Protocol (超文本传输协议, 又称 HTTP)"></a>Hypertext Transfer Protocol (超文本传输协议, 又称 HTTP)</h3><blockquote>
+<p>超文本传输协议是一个用于分布式, 协作和超媒体信息系统的应用协议, 是 WWW 数据通信的基础. - wikipedia.org</p>
+</blockquote>
+<h3 id="Uniform-Resource-Locator’s-统一资源定位符-又称-URL"><a href="#Uniform-Resource-Locator’s-统一资源定位符-又称-URL" class="headerlink" title="Uniform Resource Locator’s (统一资源定位符, 又称 URL)"></a>Uniform Resource Locator’s (统一资源定位符, 又称 URL)</h3><blockquote>
+<p>一个 URL (也称Web地址)是一个资源引用, 指定了资源在计算机网络和检索机制中的位置. 与之类似的概念是 Uniform Resource Identifier(URI), 尽管许多人认为两个术语可以互换使用, 但 URL 是统一资源标识符( URI ).URL 不仅常用于引用一个网页(http), 也可用于文件传输(ftp), 邮件(mailto), 数据库访问(JDBC) 和许多其它应用. - wikipedia.org</p>
+</blockquote>
+<h3 id="JavaScript-Object-Notation-JavaScript对象表示-又称-JSON"><a href="#JavaScript-Object-Notation-JavaScript对象表示-又称-JSON" class="headerlink" title="JavaScript Object Notation (JavaScript对象表示, 又称 JSON)"></a>JavaScript Object Notation (JavaScript对象表示, 又称 JSON)</h3><blockquote>
+<p>JSON, 有时也称 JavaScript 对象表示, 是一种使用人类可读的文本传输由键值对组成的数据对象的开放格式. 对于异步浏览器/服务器通信(AJAJ), JSON 是主要的数据格式, 很大程度上代替了 XML(AJAX). 尽管最初是从 JavaScript 脚本语言衍生而来, 但是 JSON 是语言无关性的数据格式, 在许多编程语言中, 代码解析和生成 JSON 是很容易的. JSON 的格式最初是由 Douglas Crockford 指定的, 但目前却被描述成两种标准: RFC 7159 和 ECMA-404. ECMA 标准只允许被合法的语法语句描述, 而 RFC 则提供了一些语义化描述和安全考虑. JSON 的官方网络媒体类型 application / JSON, 扩展名是 .json. - wikipedia.org</p>
+</blockquote>
+<h3 id="Web-Content-Accessibility-Guidelines-网页内容无障碍设计指南-又称-WCAG-amp-Accessible-Rich-Internet-Applications-富Internet应用程序的无障碍设计-又称-ARIA"><a href="#Web-Content-Accessibility-Guidelines-网页内容无障碍设计指南-又称-WCAG-amp-Accessible-Rich-Internet-Applications-富Internet应用程序的无障碍设计-又称-ARIA" class="headerlink" title="Web Content Accessibility Guidelines (网页内容无障碍设计指南, 又称 WCAG) &amp; Accessible Rich Internet Applications (富Internet应用程序的无障碍设计, 又称 ARIA)"></a>Web Content Accessibility Guidelines (网页内容无障碍设计指南, 又称 WCAG) &amp; Accessible Rich Internet Applications (富Internet应用程序的无障碍设计, 又称 ARIA)</h3><blockquote>
+<p>无障碍设计是指产品, 设备, 服务, 或者环境是为残疾人设计的. 无障碍设计的概念意味着与一个人的辅助技术(例如, 电脑屏幕阅读器)相兼容, 确保直接访问(即独立)和”间接访问”. - wikipedia.org</p>
+</blockquote>
+<h2 id="4-前端开发的技术栈"><a href="#4-前端开发的技术栈" class="headerlink" title="4.前端开发的技术栈"></a>4.前端开发的技术栈</h2><p>对于任何类型的前端开发人员, HTML, CSS, DOM, JavaScript, HTTP/URL 和浏览器利用是基本的技术要求.除此之外还应该掌握下面技术列表中的一个或多个：</p>
+<ul>
+<li>Content Management System (内容管理系统, 又称 CMS)</li>
+<li>Node.js</li>
+<li>Cross-browser testing (跨浏览器测试)</li>
+<li>Cross-platform testing (跨平台测试)</li>
+<li>Unit Testing (单元测试)</li>
+<li>Cross-device testing (跨设备测试)</li>
+<li>Accessibility / WAI-ARIA (无障碍访问/无障碍富Internet应用程序)</li>
+<li>Search Engine Optimization (搜索引擎优化, 又称 SEO)</li>
+<li>Interaction or User Interface design (交互或用户设计)</li>
+<li>User Experience (用户体验)</li>
+<li>Usability (可用性/易用性)</li>
+<li>E-commerce Systems (电子商务系统)</li>
+<li>Portal Systems (门户系统)</li>
+<li>Wireframing (框架)</li>
+<li>CSS layout / Grids (CSS 布局/栅格系统)</li>
+<li>DOM manipulation (e.g. jQuery) (DOM 操作)</li>
+<li>Mobile Web Performance (移动Web性能)</li>
+<li>Load Testing (载荷测试)</li>
+<li>Performance Testing (性能测试)</li>
+<li>Progressive Enhancement / Graceful Degradation (渐进增强/优雅降级)</li>
+<li>Version Control (e.g. GIT) (版本控制)</li>
+<li>MVC / MVVM / MV (MV 框架)</li>
+<li>Functional Programming (函数式编程)</li>
+<li>Data Formats (e.g. JSON, XML) (数据格式)</li>
+<li>Data API’s (e.g Restful API) (数据API)</li>
+<li>Web Font Embedding (Web字体嵌入)</li>
+<li>Scalable Vector Graphics (可伸缩向量图形, 又称 SVG)</li>
+<li>Regular Expressions (正则表达式)</li>
+<li>Content Strategy (内容策略)</li>
+<li>Microdata / Microformats (微数据/微格式)</li>
+<li>Task Runners, Build Tools, Process Automation Tools (任务管道, 构建工具, 过程自动化工具)</li>
+<li>Responsive Web Design (响应式设计)</li>
+<li>Object Oriented Programming (面向对象编程)</li>
+<li>Application Architecture (应用架构)</li>
+<li>Modules (模块)</li>
+<li>Dependency Managers (依赖关系管理)</li>
+<li>Package Managers (包管理)</li>
+<li>JavaScript Animation (JavaScript 动画)</li>
+<li>CSS Animation (CSS 动画)</li>
+<li>Charts / Graphs (图表/图形)</li>
+<li>UI widgets (UI工具集)</li>
+<li>Code Quality Testing (代码质量测试)</li>
+<li>Code Coverage Testing (代码覆盖测试)</li>
+<li>Code Complexity Analysis (代码复杂度测试)</li>
+<li>Integration Testing (集成测试)</li>
+<li>Command Line / CLI (命令行/命令行界面)</li>
+<li>Templating Strategies (模板策略)</li>
+<li>Templating Engines (模板引擎)</li>
+<li>Single Page Applications (单页应用)</li>
+<li>XHR Requests (aka AJAX) (XHR 请求, 又称 AJAX)</li>
+<li>Web/Browser Security (Web/浏览器安全)</li>
+<li>HTML Semantics (HTML 语义化)</li>
+<li>Browser Developer Tools (浏览器开发者工具)</li>
+</ul>
+<h2 id="5-前端开发能做什么"><a href="#5-前端开发能做什么" class="headerlink" title="5.前端开发能做什么"></a>5.前端开发能做什么</h2><p>一个前端开发者能在下面的操作系统列(又称: OS)表中之一上手写运行在- </p>
+<ul>
+<li>Web平台(如: 浏览器)之上的 HTML, CSS 和 JS:</li>
+<li>Windows</li>
+<li>Windows Phone</li>
+<li>OSX</li>
+<li>iOS</li>
+<li>Android</li>
+<li>Ubuntu (or Linux)</li>
+<li>Chromium</li>
+</ul>
+<p>操作系统运行在下面中的一个或者多个设备之上:</p>
+<ul>
+<li>Desktop computer</li>
+<li>Laptop / Netbook computer</li>
+<li>Mobile phone</li>
+<li>Tablet</li>
+<li>TV</li>
+<li>Watch</li>
+<li>Things (任何你能想到的, 汽车, 冰箱, 灯光, 温控器等)</li>
+</ul>
+<p>一般来说, 前端技术通过使用下列运行时场景, 能运行在前面提到的操作系统和设备之上:</p>
+<ul>
+<li>运行在 OS 上的Web浏览器(如: Chrome, IE, Safari, Firefox)</li>
+<li>运行在 OS 上并由 CLI 驱动的 headless浏览器(如: plantomJS)</li>
+<li>一个Web视图/嵌入本机程序的浏览器Tab(当做 iframe)作为运行时环- 境, 作为与本机 API 通信的桥梁. 典型的Web视图应用包括一个由Web技术(HTML, CSS, 和 JS)构建的 UI.(如: Apache Cordova, NW.js, Electron)</li>
+<li>一个由Web技术创建的本机程序会在运行时作为与本机 API 通信的桥梁, 被解释执行, UI 将使用本机的UI部分(如: IOS 本机控制)而不是Web技术控制(NativeScript, React Native).</li>
+</ul>
+<h2 id="6-开发团队包含角色"><a href="#6-开发团队包含角色" class="headerlink" title="6.开发团队包含角色"></a>6.开发团队包含角色</h2><ul>
+<li>视觉设计</li>
+<li>UI/交互设计/信息架构师</li>
+<li><strong>SEO 策略师</strong></li>
+<li>前端开发者</li>
+<li><strong>开发-运维工程师</strong></li>
+<li>后端开发者</li>
+<li><strong>API 开发者</strong></li>
+<li><strong>数据库管理员</strong></li>
+<li><strong>QA 工程师/测试人员</strong></li>
+</ul>
+<blockquote>
+<p>兵在精而不在多，与其无所不能，不如专攻一点</p>
+</blockquote>
+
+      
+    </div>
+    
+    
+    
+
+	<div>
+  
+    ﻿<div>
+    
+        <div style="text-align:center;color: #ccc;font-size:14px;">------------------本文结束<i class="fa fa-paw"></i>感谢您的阅读------------------</div>
+    
+</div>
+  
+</div>
+
+    
+
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div>坚持原创技术分享，您的支持将鼓励我继续创作！</div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>打赏</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/images/wechatpay.jpg" alt="Hailin 微信支付"/>
+        <p>微信支付</p>
+      </div>
+    
+
+    
+      <div id="alipay" style="display: inline-block">
+        <img id="alipay_qr" src="/images/alipay.jpg" alt="Hailin 支付宝"/>
+        <p>支付宝</p>
+      </div>
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+      <div>
+        <ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者：</strong>
+    Hailin
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="http://wanghailin.info/2017/04/08/2018-04-08-front-end-dev-handbook-notes/" title="前端开发者手册读书笔记">http://wanghailin.info/2017/04/08/2018-04-08-front-end-dev-handbook-notes/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>
+    本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+
+      </div>
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/求知/" rel="tag"> <i class="fa fa-tag"></i> 求知</a>
+          
+            <a href="/tags/学习笔记/" rel="tag"> <i class="fa fa-tag"></i> 学习笔记</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2014/03/24/2014-03-24-how-to-do-right-thing/" rel="next" title="如何让自己做正确的事情？">
+                <i class="fa fa-chevron-left"></i> 如何让自己做正确的事情？
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/03/19/2018-03-19-data-analyst-interview-statistics/" rel="prev" title="数据分析之路|面试题整理之统计学基础">
+                数据分析之路|面试题整理之统计学基础 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+        <!-- JiaThis Button BEGIN -->
+<div class="jiathis_style">
+<span class="jiathis_txt">分享到：</span>
+<a class="jiathis_button_fav">收藏夹</a>
+<a class="jiathis_button_copy">复制网址</a>
+<a class="jiathis_button_email">邮件</a>
+<a class="jiathis_button_weixin">微信</a>
+<a class="jiathis_button_qzone">QQ空间</a>
+<a class="jiathis_button_tqq">腾讯微博</a>
+<a class="jiathis_button_douban">豆瓣</a>
+<a class="jiathis_button_share">一键分享</a>
+
+<a href="http://www.jiathis.com/share?uid=2140465" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis" target="_blank">更多</a>
+<a class="jiathis_counter_style"></a>
+</div>
+<script type="text/javascript" >
+var jiathis_config={
+  data_track_clickback:true,
+  summary:"",
+  shortUrl:false,
+  hideMore:false
+}
+</script>
+<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=" charset="utf-8"></script>
+<!-- JiaThis Button END -->
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/images/avatar.png"
+                alt="Hailin" />
+            
+              <p class="site-author-name" itemprop="name">Hailin</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">9</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">5</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">12</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/Taolity" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:hailln@163.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://twitter.com/modaochi" target="_blank" title="Twitter">
+                      
+                        <i class="fa fa-fw fa-twitter"></i>Twitter</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="http://www.zhihu.com/people/wang-can-23-70" target="_blank" title="知乎">
+                      
+                        <i class="fa fa-fw fa-globe"></i>知乎</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#前端开发者手册"><span class="nav-number">1.</span> <span class="nav-text">前端开发者手册</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#前言"><span class="nav-number">2.</span> <span class="nav-text">前言</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-什么是前端开发者"><span class="nav-number">2.1.</span> <span class="nav-text">1.什么是前端开发者</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-前端的工作职称"><span class="nav-number">2.2.</span> <span class="nav-text">2.前端的工作职称</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-前端开发者常用的网络技术"><span class="nav-number">2.3.</span> <span class="nav-text">3.前端开发者常用的网络技术</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Hyper-Text-Markup-Language-超文本标记语言-又称-HTML"><span class="nav-number">2.3.1.</span> <span class="nav-text">Hyper Text Markup Language(超文本标记语言, 又称 HTML)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Cascading-Style-Sheets-层叠式样式表-又称-CSS"><span class="nav-number">2.3.2.</span> <span class="nav-text">Cascading Style Sheets (层叠式样式表, 又称 CSS)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Document-Object-Model-文档对象模型-又称-DOM"><span class="nav-number">2.3.3.</span> <span class="nav-text">Document Object Model (文档对象模型, 又称 DOM)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#JavaScript-Programming-Language-JavaScript编程语言-又称-ECMAScript-6-ES6-JavaScript-2015"><span class="nav-number">2.3.4.</span> <span class="nav-text">JavaScript Programming Language (JavaScript编程语言, 又称: ECMAScript 6, ES6, JavaScript 2015)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Web-API’s-Web应用程序接口-又称-HTML5-API"><span class="nav-number">2.3.5.</span> <span class="nav-text">Web API’s (Web应用程序接口, 又称 HTML5 API)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Hypertext-Transfer-Protocol-超文本传输协议-又称-HTTP"><span class="nav-number">2.3.6.</span> <span class="nav-text">Hypertext Transfer Protocol (超文本传输协议, 又称 HTTP)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Uniform-Resource-Locator’s-统一资源定位符-又称-URL"><span class="nav-number">2.3.7.</span> <span class="nav-text">Uniform Resource Locator’s (统一资源定位符, 又称 URL)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#JavaScript-Object-Notation-JavaScript对象表示-又称-JSON"><span class="nav-number">2.3.8.</span> <span class="nav-text">JavaScript Object Notation (JavaScript对象表示, 又称 JSON)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Web-Content-Accessibility-Guidelines-网页内容无障碍设计指南-又称-WCAG-amp-Accessible-Rich-Internet-Applications-富Internet应用程序的无障碍设计-又称-ARIA"><span class="nav-number">2.3.9.</span> <span class="nav-text">Web Content Accessibility Guidelines (网页内容无障碍设计指南, 又称 WCAG) &amp; Accessible Rich Internet Applications (富Internet应用程序的无障碍设计, 又称 ARIA)</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-前端开发的技术栈"><span class="nav-number">2.4.</span> <span class="nav-text">4.前端开发的技术栈</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-前端开发能做什么"><span class="nav-number">2.5.</span> <span class="nav-text">5.前端开发能做什么</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-开发团队包含角色"><span class="nav-number">2.6.</span> <span class="nav-text">6.开发团队包含角色</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+        <div class="back-to-top">
+          <i class="fa fa-arrow-up"></i>
+          
+        </div>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Hailin</span>
+
+  
+</div>
+
+
+ <!-- <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Pisces</a> v5.1.4</div>
+-->
+
+
+
+
+
+<div class="theme-info">
+  <div class="powered-by"></div>
+  <span class="post-count">博客全站共18.7k字</span>
+</div>
+        
+<div class="busuanzi-count">
+  <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="site-uv">
+      本站访客数 <i class="fa fa-user"></i>
+      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+      人次
+    </span>
+  
+
+  
+    <span class="site-pv">
+      本站总访问量 <i class="fa fa-eye"></i>
+      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+      次
+    </span>
+  
+</div>
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+  
+
+
+  
+
+  
+
+</body>
+</html>
+
+<!-- ҳ����С���� -->
+<script type="text/javascript" src="/js/src/love.js"></script>

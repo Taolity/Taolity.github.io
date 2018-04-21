@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://wanghailin.info/"/>
-  <updated>2018-04-14T06:57:13.967Z</updated>
+  <updated>2018-04-21T11:53:30.505Z</updated>
   <id>http://wanghailin.info/</id>
   
   <author>
@@ -15,6 +15,54 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>读《不要因为走得太远而忘记为什么出发》</title>
+    <link href="http://wanghailin.info/2018/04/21/2018-04-21-not-forget-why-go/"/>
+    <id>http://wanghailin.info/2018/04/21/2018-04-21-not-forget-why-go/</id>
+    <published>2018-04-20T16:00:00.000Z</published>
+    <updated>2018-04-21T11:53:30.505Z</updated>
+    
+    <content type="html"><![CDATA[<a id="more"></a> <ol><li>今天所做的一切相加就等于未来</li><li>生命需要保持一种激情，激情能让别人感到你是不可阻挡的时候，就会为你的成功让路，一个内心不可屈服的气质是会感动人的，并能够改变很多东西</li><li>这不是你要的，不是你喜欢的</li><li>有心人即便打杂，也不忘学艺</li><li>一个完全不同的结果，一定有一个完全不同的过程，你不改变这个过程就改变不了这个结果</li><li>努力不是成功的根本。想成功的人都很努力，但成功的人往往只有一小部分。倘若你努力，但你的观念是错误的，很可能离正确的方向越来越远。所以更加重要的是观念。而认识观念、改变观念完全是由思为防止决定的。</li><li>人要有两方面的能力，我们一般来说更注重一种知识的积累，而与知识相比，有一个更需要注意的，那就是思维方法，包括你接受新知识的能力，包括你判断和处理信息的能力，这些应该比知识更重要。</li><li>生活的磨难能够成为力量的源泉</li><li>人一生要学会经常往回看——为什么呢？我们从小收的教育一直都是站在起点往终点看，上了小学琢磨着上个好中学，上完中学，琢磨着考个好大学再找个好工作。价值观都是单向的，我觉得必须再添一个往回看的坐标。你想啊，曾经那些刻骨铭心、要死要活、当时自认为撑不过去的事情，现在看来也不过尔尔。</li><li>提炼归纳，举一反三，哲理性思辨。总结不是交给上级的，也不是交给父母的，也不是拿给大家念的，就是自己给自己总结。</li><li>我过着过着突然明白了，“现在”就是小时候想过无数次要为之奋斗的未来啊。所以最现实的做法就是把现在的事情、眼前的事情做好。今天所做的一切相加就等于把未来。</li><li>干任何事情都不容易，选择了一种工作，实际上也就选择了一种生活方式。</li><li>因为走得太远，我们已经忘记了为什么要出发。</li><li>当你过于进入、过于热衷于一个东西时，你就需要去放弃这个东西。你只有出去了才能进来，也只有进来了才能出去。</li><li>如果一个人过于热爱某个东西，那么这东西就已经不再是它本身，已经变成了你的一种热爱，强加了你许多个人的东西，而不是事件本身。</li><li>《太极》里说，太想练成的人和三心二意的人，都练不成太极。你必须保持一定状态，才能得到一种真传。按照西方的没血表述就是，距离产生美，必须有一定的距离，贴得太近反而什么也看不见。<br>17.大道无术，最重要的时修炼自己，提升自己，而不是学什么与人斗的方法。</li></ol>]]></content>
+    
+    <summary type="html">
+    
+      不忘初心，继续前进
+    
+    </summary>
+    
+      <category term="读书笔记" scheme="http://wanghailin.info/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
+    
+    
+      <category term="求知" scheme="http://wanghailin.info/tags/%E6%B1%82%E7%9F%A5/"/>
+    
+      <category term="学习笔记" scheme="http://wanghailin.info/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>git基本命令使用（一）</title>
+    <link href="http://wanghailin.info/2018/04/17/2018-04-17-git-command/"/>
+    <id>http://wanghailin.info/2018/04/17/2018-04-17-git-command/</id>
+    <published>2018-04-16T16:00:00.000Z</published>
+    <updated>2018-04-21T11:42:30.870Z</updated>
+    
+    <content type="html"><![CDATA[<a id="more"></a> <p>1.基本配置</p><ul><li>git全局配置文件 命令：git config –global &lt;配置名称&gt;&lt;配置的值&gt;  </li><li>可使用 ls -al 或者是cat ~/.gitconfig 查看配置文件</li></ul><p>2.clone一个仓库</p><ul><li>git clone <a href="https://github.com/username/仓库名" target="_blank" rel="noopener">https://github.com/username/仓库名</a> </li><li>git init 初始化仓库</li></ul><p>3.正常的工作流程<br>git的基本流程如下：</p><ul><li>创建或修改文件</li><li>使用git add命令添加新创建或修改的文件到本地的缓存区（Index）</li><li>使用git commit命令提交到本地代码库</li><li><p>（可选，有的时候并没有可以同步的远端代码库）使用git push命令将本地代码库同步到远端代码库</p><p>echo “添加内容”&gt;&gt; 文件名<br>git status 查看当前git仓库的状态<br>git diff –cached 查看缓存区中的那些文件被修改</p></li></ul><p>5.分支与合并</p><p>分支</p><blockquote><p>Git的分支可以让你在主线（master分支）之外进行代码提交，同时又不会影响代码库主线。分支的作用体现在多人协作开发中，比如一个团队开发软件，你负责独立的一个功能需要一个月的时间来完成，你就可以创建一个分支，只把该功能的代码提交到这个分支，而其他同事仍然可以继续使用主线开发，你每天的提交不会对他们造成任何影响。当你完成功能后，测试通过再把你的功能分支合并到主线。</p></blockquote><ul><li>git branch 分支名  创建分支</li><li>git checkout 分支名  切换到其他分支</li><li>git branch -d  只能删除那些已经被当前分支的合并的分支.</li><li>git branch –D  强制删除某个分支</li></ul><p>合并</p><ul><li>git reset –hard HEAD^ 撤销合并<blockquote><p>快速向前合并<br>还有一种需要特殊对待的情况，在前面没有提到。通常，一个合并会产生一个合并提交(commit), 把两个父分支里的每一行内容都合并进来。<br>但是，如果当前的分支和另一个分支没有内容上的差异，就是说当前分支的每一个提交(commit)都已经存在另一个分支里了，git 就会执行一个“快速向前”(fast forward)操作；git 不创建任何新的提交(commit),只是将当前分支指向合并进来的分支。</p></blockquote></li></ul><p>6.git 日志</p><ul><li>git log 查看日志</li><li>git log –stat 日志统计</li><li>git log –pretty=oneline 或 git log –pretty=short pretty参数可以使用若干表现格式<blockquote><p>你也可用medium,full,fuller,email 或raw。 如果这些格式不完全符合你的需求， 你也可以用–pretty=format参数定义格式。</p></blockquote></li></ul><blockquote><p>–graph 选项可以可视化你的提交图(commit graph)，会用ASCII字符来画出一个很漂亮的提交历史(commit history)线<br>日志记录可以按不同的顺序来显示。如果你要指定一个特定的顺序，可以为git log命令添加顺序参数。</p></blockquote><p>按默认情况，提交会按逆时间顺序显示，可以指定–topo-order参数，让提交按拓扑顺序来显示(就是子提交在它们的父提交前显示):</p><blockquote><p>$ git log –pretty=format:’%h : %s’ –topo-order –graph<br>也可以使用 –reverse参数来逆向显示所有提交日志</p></blockquote><h2 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h2><ul><li>git config：配置相关信息</li><li>git clone：复制仓库</li><li>git init：初始化仓库</li><li>git add：添加更新内容到索引中</li><li>git diff：比较内容</li><li>git status：获取当前项目状况</li><li>git commit：提交</li><li>git branch：分支相关</li><li>git checkout：切换分支</li><li>git merge：合并分支</li><li>git reset：恢复版本</li><li>git log：查看日志</li></ul>]]></content>
+    
+    <summary type="html">
+    
+      万丈高楼平地起，夯实基础为第一。
+    
+    </summary>
+    
+      <category term="笔记" scheme="http://wanghailin.info/categories/%E7%AC%94%E8%AE%B0/"/>
+    
+    
+      <category term="求知" scheme="http://wanghailin.info/tags/%E6%B1%82%E7%9F%A5/"/>
+    
+      <category term="学习笔记" scheme="http://wanghailin.info/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    
+  </entry>
   
   <entry>
     <title>三十六计，巧藏诗中</title>
@@ -109,6 +157,30 @@
       <category term="数据分析" scheme="http://wanghailin.info/tags/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/"/>
     
       <category term="统计学" scheme="http://wanghailin.info/tags/%E7%BB%9F%E8%AE%A1%E5%AD%A6/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>前端开发者手册读书笔记</title>
+    <link href="http://wanghailin.info/2017/04/08/2018-04-08-front-end-dev-handbook-notes/"/>
+    <id>http://wanghailin.info/2017/04/08/2018-04-08-front-end-dev-handbook-notes/</id>
+    <published>2017-04-07T16:00:00.000Z</published>
+    <updated>2018-04-21T11:47:49.497Z</updated>
+    
+    <content type="html"><![CDATA[<a id="more"></a> <h1 id="前端开发者手册"><a href="#前端开发者手册" class="headerlink" title="前端开发者手册"></a>前端开发者手册</h1><h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><blockquote><p>1.概述并讨论了前端工程的实践，如何学习以及时间时应该使用什么工具</p><p>2.目的：提供学习资料以及开发工具的专业资源，提供研究材料</p><p>3.支持web技术(HTML,CSS,DOM以及JavaScript)</p></blockquote><h2 id="1-什么是前端开发者"><a href="#1-什么是前端开发者" class="headerlink" title="1.什么是前端开发者"></a>1.什么是前端开发者</h2><p>一个前端开发者, 要会使用Web技术(如：HTML,CSS,DOM和JavaScript)设计和开发网站应用. 网站应用, 或运行于 Web平台 之上, 或用于编译非Web平台环境的输入(如：NativeScript).</p><p>Web浏览器 </p><ul><li><p>Chrome </p></li><li><p>Internet </p></li><li><p>Explorer </p></li><li><p>Firefox </p></li><li><p>Safari</p></li></ul><p>无壳浏览器 </p><ul><li><p>PhantomJS </p></li><li><p>slimerjs </p></li><li><p>trifleJS</p></li></ul><p>Web视图 </p><ul><li>Cordova (用于本地手机/平板应用)</li></ul><ul><li>NW.js (即 Node-Webkit, 用于桌面应用)</li></ul><ul><li>Electron (用于桌面应用)</li></ul><h2 id="2-前端的工作职称"><a href="#2-前端的工作职称" class="headerlink" title="2.前端的工作职称"></a>2.前端的工作职称</h2><ul><li>前端开发者/工程师</li><li>CSS/HTML开发者</li><li>前端JavaScript开发人员</li><li>前端Web设计师</li><li>Web/前端用户界面开发者/工程师</li><li>移动/平板前端开发者</li><li>前端SEO专家</li><li>前端可访问性专家</li><li>前端开发运维</li><li>前端测试/QA</li></ul><h2 id="3-前端开发者常用的网络技术"><a href="#3-前端开发者常用的网络技术" class="headerlink" title="3.前端开发者常用的网络技术"></a>3.前端开发者常用的网络技术</h2><ul><li>Hyper Text Markup Language(超文本标记语言, 又称 HTML)</li><li>Cascading Style Sheets (层叠式样式表, 又称 CSS)</li><li>Document Object Model (文档对象模型, 又称 DOM)</li><li>JavaScript Programming Language (JavaScript编程语言, 又称: - ECMAScript 6, ES6, JavaScript 2015)</li><li>Web API’s (Web应用程序接口, 又称 HTML5 API 或浏览器 API)</li><li>Hypertext Transfer Protocol (超文本传输协议, 又称 HTTP)</li><li>Uniform Resource Locator’s (统一资源定位符, 又称 URL)</li><li>JavaScript Object Notation (JavaScript对象表示, 又称 JSON)</li><li>Web Content Accessibility Guidelines (网页内容无障碍设计指南, 又称 WCAG) &amp; Accessible Rich Internet Applications (Internet应用程序的无障碍设计, 又称 ARIA)</li></ul><h3 id="Hyper-Text-Markup-Language-超文本标记语言-又称-HTML"><a href="#Hyper-Text-Markup-Language-超文本标记语言-又称-HTML" class="headerlink" title="Hyper Text Markup Language(超文本标记语言, 又称 HTML)"></a>Hyper Text Markup Language(超文本标记语言, 又称 HTML)</h3><blockquote><p>超文本标记语言, 通常被称为 HTML, 是被用于创建网页的标准标记语言. Web浏览器能将 HTML 文件渲染成可见的或者可听到的. HTML 随着线索提示, 语义化地描述了网站的结构, 使它成为一种标记语言, 而不是编程语言. - wikipedia.org</p></blockquote><h3 id="Cascading-Style-Sheets-层叠式样式表-又称-CSS"><a href="#Cascading-Style-Sheets-层叠式样式表-又称-CSS" class="headerlink" title="Cascading Style Sheets (层叠式样式表, 又称 CSS)"></a>Cascading Style Sheets (层叠式样式表, 又称 CSS)</h3><blockquote><p>层叠式样式表(CSS)是用于描述外观和格式化标记语言编写的文档的样式表语言. 尽管经常被用来改变用 HTML 和 XHTML 编写的网页和用户界面的样式, 但也可用于任何 XML 文档, 包括纯 XML, SVG 和 XUL. 跟 JavaScript 和 HTML 一样, CSS是被大多数网站用于为Web应用程序创建富有吸引力的网页, 用户界面的一种基础技术, 也为许多移动应用程序创建用户界面. - wikipedia.org</p></blockquote><h3 id="Document-Object-Model-文档对象模型-又称-DOM"><a href="#Document-Object-Model-文档对象模型-又称-DOM" class="headerlink" title="Document Object Model (文档对象模型, 又称 DOM)"></a>Document Object Model (文档对象模型, 又称 DOM)</h3><blockquote><p>文档对象模型用于代表和对象交互的HTML, XHTML 和 XML 文档, 是一种跨平台和语言无关性的约定. 每一份文档的所有节点被组织成一种树结构, 称为 DOM 树. DOM 对象通过使用对象上的方法被处理和操作, 一个 DOM 对象的公共接口被指定为它的应用程序编程接口(API). - wikipedia.org</p></blockquote><h3 id="JavaScript-Programming-Language-JavaScript编程语言-又称-ECMAScript-6-ES6-JavaScript-2015"><a href="#JavaScript-Programming-Language-JavaScript编程语言-又称-ECMAScript-6-ES6-JavaScript-2015" class="headerlink" title="JavaScript Programming Language (JavaScript编程语言, 又称: ECMAScript 6, ES6, JavaScript 2015)"></a>JavaScript Programming Language (JavaScript编程语言, 又称: ECMAScript 6, ES6, JavaScript 2015)</h3><blockquote><p>JavaScript 是一种高级的, 动态的, 无类型的和解释型的编程语言, 它已经在 ECMAScript 语言规范中被标准化. 跟 HTML 和 CSS 一样, JavaScript 是 WWW 内容生成的第三种必不可少的技术; 大多数的网会使用Javascript, 并且 Javascript 被所有现在Web浏览器支持. JavaScript 基于原型和函数优先的特点, 使它成为多范型的语言, 支持面向对象的, 命令式的, 和函数式编程风格. JavaScript 能提供 API 来处理文本, 数组, 日期和正则表达式, 但不包括任何 I/O, 如网络, 存储或图形工具, 对这些的依赖取决于宿主环境中嵌入了什么. - wikipedia.org</p></blockquote><h3 id="Web-API’s-Web应用程序接口-又称-HTML5-API"><a href="#Web-API’s-Web应用程序接口-又称-HTML5-API" class="headerlink" title="Web API’s (Web应用程序接口, 又称 HTML5 API)"></a>Web API’s (Web应用程序接口, 又称 HTML5 API)</h3><blockquote><p>当使用 JavaScript 为Web程序写代码时, 有很多不错的 API 是可以利用的. 下面列举了所有在Web APP 或网站开发中可能会用到的接口. - Mozilla</p></blockquote><h3 id="Hypertext-Transfer-Protocol-超文本传输协议-又称-HTTP"><a href="#Hypertext-Transfer-Protocol-超文本传输协议-又称-HTTP" class="headerlink" title="Hypertext Transfer Protocol (超文本传输协议, 又称 HTTP)"></a>Hypertext Transfer Protocol (超文本传输协议, 又称 HTTP)</h3><blockquote><p>超文本传输协议是一个用于分布式, 协作和超媒体信息系统的应用协议, 是 WWW 数据通信的基础. - wikipedia.org</p></blockquote><h3 id="Uniform-Resource-Locator’s-统一资源定位符-又称-URL"><a href="#Uniform-Resource-Locator’s-统一资源定位符-又称-URL" class="headerlink" title="Uniform Resource Locator’s (统一资源定位符, 又称 URL)"></a>Uniform Resource Locator’s (统一资源定位符, 又称 URL)</h3><blockquote><p>一个 URL (也称Web地址)是一个资源引用, 指定了资源在计算机网络和检索机制中的位置. 与之类似的概念是 Uniform Resource Identifier(URI), 尽管许多人认为两个术语可以互换使用, 但 URL 是统一资源标识符( URI ).URL 不仅常用于引用一个网页(http), 也可用于文件传输(ftp), 邮件(mailto), 数据库访问(JDBC) 和许多其它应用. - wikipedia.org</p></blockquote><h3 id="JavaScript-Object-Notation-JavaScript对象表示-又称-JSON"><a href="#JavaScript-Object-Notation-JavaScript对象表示-又称-JSON" class="headerlink" title="JavaScript Object Notation (JavaScript对象表示, 又称 JSON)"></a>JavaScript Object Notation (JavaScript对象表示, 又称 JSON)</h3><blockquote><p>JSON, 有时也称 JavaScript 对象表示, 是一种使用人类可读的文本传输由键值对组成的数据对象的开放格式. 对于异步浏览器/服务器通信(AJAJ), JSON 是主要的数据格式, 很大程度上代替了 XML(AJAX). 尽管最初是从 JavaScript 脚本语言衍生而来, 但是 JSON 是语言无关性的数据格式, 在许多编程语言中, 代码解析和生成 JSON 是很容易的. JSON 的格式最初是由 Douglas Crockford 指定的, 但目前却被描述成两种标准: RFC 7159 和 ECMA-404. ECMA 标准只允许被合法的语法语句描述, 而 RFC 则提供了一些语义化描述和安全考虑. JSON 的官方网络媒体类型 application / JSON, 扩展名是 .json. - wikipedia.org</p></blockquote><h3 id="Web-Content-Accessibility-Guidelines-网页内容无障碍设计指南-又称-WCAG-amp-Accessible-Rich-Internet-Applications-富Internet应用程序的无障碍设计-又称-ARIA"><a href="#Web-Content-Accessibility-Guidelines-网页内容无障碍设计指南-又称-WCAG-amp-Accessible-Rich-Internet-Applications-富Internet应用程序的无障碍设计-又称-ARIA" class="headerlink" title="Web Content Accessibility Guidelines (网页内容无障碍设计指南, 又称 WCAG) &amp; Accessible Rich Internet Applications (富Internet应用程序的无障碍设计, 又称 ARIA)"></a>Web Content Accessibility Guidelines (网页内容无障碍设计指南, 又称 WCAG) &amp; Accessible Rich Internet Applications (富Internet应用程序的无障碍设计, 又称 ARIA)</h3><blockquote><p>无障碍设计是指产品, 设备, 服务, 或者环境是为残疾人设计的. 无障碍设计的概念意味着与一个人的辅助技术(例如, 电脑屏幕阅读器)相兼容, 确保直接访问(即独立)和”间接访问”. - wikipedia.org</p></blockquote><h2 id="4-前端开发的技术栈"><a href="#4-前端开发的技术栈" class="headerlink" title="4.前端开发的技术栈"></a>4.前端开发的技术栈</h2><p>对于任何类型的前端开发人员, HTML, CSS, DOM, JavaScript, HTTP/URL 和浏览器利用是基本的技术要求.除此之外还应该掌握下面技术列表中的一个或多个：</p><ul><li>Content Management System (内容管理系统, 又称 CMS)</li><li>Node.js</li><li>Cross-browser testing (跨浏览器测试)</li><li>Cross-platform testing (跨平台测试)</li><li>Unit Testing (单元测试)</li><li>Cross-device testing (跨设备测试)</li><li>Accessibility / WAI-ARIA (无障碍访问/无障碍富Internet应用程序)</li><li>Search Engine Optimization (搜索引擎优化, 又称 SEO)</li><li>Interaction or User Interface design (交互或用户设计)</li><li>User Experience (用户体验)</li><li>Usability (可用性/易用性)</li><li>E-commerce Systems (电子商务系统)</li><li>Portal Systems (门户系统)</li><li>Wireframing (框架)</li><li>CSS layout / Grids (CSS 布局/栅格系统)</li><li>DOM manipulation (e.g. jQuery) (DOM 操作)</li><li>Mobile Web Performance (移动Web性能)</li><li>Load Testing (载荷测试)</li><li>Performance Testing (性能测试)</li><li>Progressive Enhancement / Graceful Degradation (渐进增强/优雅降级)</li><li>Version Control (e.g. GIT) (版本控制)</li><li>MVC / MVVM / MV (MV 框架)</li><li>Functional Programming (函数式编程)</li><li>Data Formats (e.g. JSON, XML) (数据格式)</li><li>Data API’s (e.g Restful API) (数据API)</li><li>Web Font Embedding (Web字体嵌入)</li><li>Scalable Vector Graphics (可伸缩向量图形, 又称 SVG)</li><li>Regular Expressions (正则表达式)</li><li>Content Strategy (内容策略)</li><li>Microdata / Microformats (微数据/微格式)</li><li>Task Runners, Build Tools, Process Automation Tools (任务管道, 构建工具, 过程自动化工具)</li><li>Responsive Web Design (响应式设计)</li><li>Object Oriented Programming (面向对象编程)</li><li>Application Architecture (应用架构)</li><li>Modules (模块)</li><li>Dependency Managers (依赖关系管理)</li><li>Package Managers (包管理)</li><li>JavaScript Animation (JavaScript 动画)</li><li>CSS Animation (CSS 动画)</li><li>Charts / Graphs (图表/图形)</li><li>UI widgets (UI工具集)</li><li>Code Quality Testing (代码质量测试)</li><li>Code Coverage Testing (代码覆盖测试)</li><li>Code Complexity Analysis (代码复杂度测试)</li><li>Integration Testing (集成测试)</li><li>Command Line / CLI (命令行/命令行界面)</li><li>Templating Strategies (模板策略)</li><li>Templating Engines (模板引擎)</li><li>Single Page Applications (单页应用)</li><li>XHR Requests (aka AJAX) (XHR 请求, 又称 AJAX)</li><li>Web/Browser Security (Web/浏览器安全)</li><li>HTML Semantics (HTML 语义化)</li><li>Browser Developer Tools (浏览器开发者工具)</li></ul><h2 id="5-前端开发能做什么"><a href="#5-前端开发能做什么" class="headerlink" title="5.前端开发能做什么"></a>5.前端开发能做什么</h2><p>一个前端开发者能在下面的操作系统列(又称: OS)表中之一上手写运行在- </p><ul><li>Web平台(如: 浏览器)之上的 HTML, CSS 和 JS:</li><li>Windows</li><li>Windows Phone</li><li>OSX</li><li>iOS</li><li>Android</li><li>Ubuntu (or Linux)</li><li>Chromium</li></ul><p>操作系统运行在下面中的一个或者多个设备之上:</p><ul><li>Desktop computer</li><li>Laptop / Netbook computer</li><li>Mobile phone</li><li>Tablet</li><li>TV</li><li>Watch</li><li>Things (任何你能想到的, 汽车, 冰箱, 灯光, 温控器等)</li></ul><p>一般来说, 前端技术通过使用下列运行时场景, 能运行在前面提到的操作系统和设备之上:</p><ul><li>运行在 OS 上的Web浏览器(如: Chrome, IE, Safari, Firefox)</li><li>运行在 OS 上并由 CLI 驱动的 headless浏览器(如: plantomJS)</li><li>一个Web视图/嵌入本机程序的浏览器Tab(当做 iframe)作为运行时环- 境, 作为与本机 API 通信的桥梁. 典型的Web视图应用包括一个由Web技术(HTML, CSS, 和 JS)构建的 UI.(如: Apache Cordova, NW.js, Electron)</li><li>一个由Web技术创建的本机程序会在运行时作为与本机 API 通信的桥梁, 被解释执行, UI 将使用本机的UI部分(如: IOS 本机控制)而不是Web技术控制(NativeScript, React Native).</li></ul><h2 id="6-开发团队包含角色"><a href="#6-开发团队包含角色" class="headerlink" title="6.开发团队包含角色"></a>6.开发团队包含角色</h2><ul><li>视觉设计</li><li>UI/交互设计/信息架构师</li><li><strong>SEO 策略师</strong></li><li>前端开发者</li><li><strong>开发-运维工程师</strong></li><li>后端开发者</li><li><strong>API 开发者</strong></li><li><strong>数据库管理员</strong></li><li><strong>QA 工程师/测试人员</strong></li></ul><blockquote><p>兵在精而不在多，与其无所不能，不如专攻一点</p></blockquote>]]></content>
+    
+    <summary type="html">
+    
+      万丈高楼平地起，夯实基础是第一
+    
+    </summary>
+    
+      <category term="读书笔记" scheme="http://wanghailin.info/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
+    
+    
+      <category term="求知" scheme="http://wanghailin.info/tags/%E6%B1%82%E7%9F%A5/"/>
+    
+      <category term="学习笔记" scheme="http://wanghailin.info/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
     
   </entry>
   
