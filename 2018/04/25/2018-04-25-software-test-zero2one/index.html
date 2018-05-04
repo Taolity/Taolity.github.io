@@ -88,7 +88,7 @@
 
 
 
-  <meta name="keywords" content="求知,学习笔记," />
+  <meta name="keywords" content="软件测试,IT," />
 
 
 
@@ -99,18 +99,18 @@
 
 
 
-<meta name="description" content="万丈高楼平地起，夯实基础为第一。">
-<meta name="keywords" content="求知,学习笔记">
+<meta name="description" content="厚积薄发！">
+<meta name="keywords" content="软件测试,IT">
 <meta property="og:type" content="article">
-<meta property="og:title" content="git基本命令使用（一）">
-<meta property="og:url" content="http://wanghailin.info/2018/04/17/2018-04-17-git-command/index.html">
+<meta property="og:title" content="读《从菜鸟到测试架构师：一个测试工程师的成长日记》">
+<meta property="og:url" content="http://wanghailin.info/2018/04/25/2018-04-25-software-test-zero2one/index.html">
 <meta property="og:site_name" content="学而勤习之">
-<meta property="og:description" content="万丈高楼平地起，夯实基础为第一。">
+<meta property="og:description" content="厚积薄发！">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-04-21T11:42:30.870Z">
+<meta property="og:updated_time" content="2018-05-04T12:02:34.144Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="git基本命令使用（一）">
-<meta name="twitter:description" content="万丈高楼平地起，夯实基础为第一。">
+<meta name="twitter:title" content="读《从菜鸟到测试架构师：一个测试工程师的成长日记》">
+<meta name="twitter:description" content="厚积薄发！">
 
 
 
@@ -140,13 +140,13 @@
 
 
 
-  <link rel="canonical" href="http://wanghailin.info/2018/04/17/2018-04-17-git-command/"/>
+  <link rel="canonical" href="http://wanghailin.info/2018/04/25/2018-04-25-software-test-zero2one/"/>
 
 
 
 
 
-  <title>git基本命令使用（一） | 学而勤习之</title>
+  <title>读《从菜鸟到测试架构师：一个测试工程师的成长日记》 | 学而勤习之</title>
   
 
 
@@ -283,7 +283,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://wanghailin.info/2018/04/17/2018-04-17-git-command/">
+    <link itemprop="mainEntityOfPage" href="http://wanghailin.info/2018/04/25/2018-04-25-software-test-zero2one/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Hailin">
@@ -300,7 +300,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">git基本命令使用（一）</h1>
+          <h1 class="post-title" itemprop="name headline">读《从菜鸟到测试架构师：一个测试工程师的成长日记》</h1>
         
 
         <div class="post-meta">
@@ -312,8 +312,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-04-17T00:00:00+08:00">
-                2018-04-17
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-04-25T00:00:00+08:00">
+                2018-04-25
               </time>
             
 
@@ -335,8 +335,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/笔记/" itemprop="url" rel="index">
-                    <span itemprop="name">笔记</span>
+                  <a href="/categories/读书笔记/" itemprop="url" rel="index">
+                    <span itemprop="name">读书笔记</span>
                   </a>
                 </span>
 
@@ -371,7 +371,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  903
+                  1,945
                 </span>
               
 
@@ -387,7 +387,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  3
+                  7
                 </span>
               
             </div>
@@ -395,7 +395,7 @@
 
           
               <div class="post-description">
-                  万丈高楼平地起，夯实基础为第一。
+                  厚积薄发！
               </div>
           
 
@@ -413,73 +413,35 @@
 
       
         <a id="more"></a> 
-<p>1.基本配置</p>
-<ul>
-<li>git全局配置文件 命令：git config –global &lt;配置名称&gt;&lt;配置的值&gt;  </li>
-<li>可使用 ls -al 或者是cat ~/.gitconfig 查看配置文件</li>
-</ul>
-<p>2.clone一个仓库</p>
-<ul>
-<li>git clone <a href="https://github.com/username/仓库名" target="_blank" rel="noopener">https://github.com/username/仓库名</a> </li>
-<li>git init 初始化仓库</li>
-</ul>
-<p>3.正常的工作流程<br>git的基本流程如下：</p>
-<ul>
-<li>创建或修改文件</li>
-<li>使用git add命令添加新创建或修改的文件到本地的缓存区（Index）</li>
-<li>使用git commit命令提交到本地代码库</li>
-<li><p>（可选，有的时候并没有可以同步的远端代码库）使用git push命令将本地代码库同步到远端代码库</p>
-<p>echo “添加内容”&gt;&gt; 文件名<br>git status 查看当前git仓库的状态<br>git diff –cached 查看缓存区中的那些文件被修改</p>
+<ol>
+<li>如何确保软件质量、减少质量问题给企业及用户带来的隐患，是软件测试工作的核心。</li>
+<li>在大型软件开发团队中，测试被分成很多种类和步骤，每种测试有针对性地模拟使用测试对象的场景，并试图找出测试对象的潜在问题和缺陷(Bug)。在确定原因后，制定严谨完善的解决方案并根据方案修复缺陷。</li>
+<li>测试其实是发现并解决问题的过程，而其目标则是让软件产品以尽可能高的质量交付给客户，使软件产品中存在的问题尽可能少。</li>
+<li>除了小型项目，进行完全（各种输入和前提条件的组合）的测试是不可行的。可行的方法是运用<strong>风险分析</strong>和不同系统功能的<strong>测试优先级</strong>，来确定测试的关注点，从而替代穷尽测试。</li>
+<li><strong>单元测试</strong>，是和开发最接近的一种测试。开发人员编写单元测试用例并执行，验证单元模块是否得出预期的结果。测试驱动开发（Test Driven Development，TDD）。测试驱动开发的核心就是把单元测试做好，功能开发以通过相应的单元测试用例为目标。单元测试是粒度最小的软件测试，小粒度能保证复杂系统中的每个“螺丝钉”都质量合格。</li>
+<li><strong>功能测试</strong>是通过黑盒子模式发现代码集成后存在的功能问题的测试。关注的重点是系统的功能。通过执行自动或手动的测试用例，可以验证相应的功能点是否正确。<em>单元测试关注的是一个最小的代码片段(比如一个类或接口）,功能测试关注的是一个完整的业务功能</em>。</li>
+<li><strong>性能测试</strong>是重点验证软件的<strong>非功能性需求</strong>的测试。企业级软件通常用于应对复杂苛刻的用户场景。在软件设计和安装的过程中，有许多细节能提供软件的性能，包括吞吐率、稳定性、可靠性等。性能测试通过自动化的方法模拟真实用户并发访问的场景，以验证系统的性能指标或发现其性能瓶颈。</li>
+<li><p>苦练基本功：了解开发平台和方式–操作系统（Windows、Unix、Linux）、搭建测试环境（执行构建测试–使用构建化的脚本、自动化安装）</p>
+<p> 正确的流程和步骤一定要及时记录。有了流程和步骤的指引，可以避免大量不必要的重复劳动。</p>
 </li>
-</ul>
-<p>5.分支与合并</p>
-<p>分支</p>
-<blockquote>
-<p>Git的分支可以让你在主线（master分支）之外进行代码提交，同时又不会影响代码库主线。分支的作用体现在多人协作开发中，比如一个团队开发软件，你负责独立的一个功能需要一个月的时间来完成，你就可以创建一个分支，只把该功能的代码提交到这个分支，而其他同事仍然可以继续使用主线开发，你每天的提交不会对他们造成任何影响。当你完成功能后，测试通过再把你的功能分支合并到主线。</p>
-</blockquote>
-<ul>
-<li>git branch 分支名  创建分支</li>
-<li>git checkout 分支名  切换到其他分支</li>
-<li>git branch -d  只能删除那些已经被当前分支的合并的分支.</li>
-<li>git branch –D  强制删除某个分支</li>
-</ul>
-<p>合并</p>
-<ul>
-<li>git reset –hard HEAD^ 撤销合并<blockquote>
-<p>快速向前合并<br>还有一种需要特殊对待的情况，在前面没有提到。通常，一个合并会产生一个合并提交(commit), 把两个父分支里的每一行内容都合并进来。<br>但是，如果当前的分支和另一个分支没有内容上的差异，就是说当前分支的每一个提交(commit)都已经存在另一个分支里了，git 就会执行一个“快速向前”(fast forward)操作；git 不创建任何新的提交(commit),只是将当前分支指向合并进来的分支。</p>
-</blockquote>
+<li><p>中间件（Middleware）是提供系统软件和应用软件之间连接的软件。</p>
 </li>
-</ul>
-<p>6.git 日志</p>
-<ul>
-<li>git log 查看日志</li>
-<li>git log –stat 日志统计</li>
-<li>git log –pretty=oneline 或 git log –pretty=short pretty参数可以使用若干表现格式<blockquote>
-<p>你也可用medium,full,fuller,email 或raw。 如果这些格式不完全符合你的需求， 你也可以用–pretty=format参数定义格式。</p>
-</blockquote>
+<li><p>敏捷开发（Agile Development）。迭代开发（Iterative Development）和增量开发（Incremental Development）。</p>
+<p><strong>迭代开发</strong>是一种“重复时序安排”的开发方式。迭代开发把一个完整的瀑布模型开发流程分成多个迭代，每个迭代可以看成是独立的开发过程，其中包含了项目的主要步骤，如设计、开发和测试等。把完整过程分成多个持续时间较短的迭代，其好处是生产的周期变短了，每个完整的周期都会产出相应的产品，这种方式有利于在完整项目开发的过程中跟踪和控制开发进度及产品质量。</p>
+<p>增量开发用的则是一种“分段完成”的策略。在增量开发模式中，系统中不同的部分被安排在多个阶段完成，各个部分完成后再集成到系统中。</p>
 </li>
-</ul>
-<blockquote>
-<p>–graph 选项可以可视化你的提交图(commit graph)，会用ASCII字符来画出一个很漂亮的提交历史(commit history)线<br>日志记录可以按不同的顺序来显示。如果你要指定一个特定的顺序，可以为git log命令添加顺序参数。</p>
-</blockquote>
-<p>按默认情况，提交会按逆时间顺序显示，可以指定–topo-order参数，让提交按拓扑顺序来显示(就是子提交在它们的父提交前显示):</p>
-<blockquote>
-<p>$ git log –pretty=format:’%h : %s’ –topo-order –graph<br>也可以使用 –reverse参数来逆向显示所有提交日志</p>
-</blockquote>
-<h2 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h2><ul>
-<li>git config：配置相关信息</li>
-<li>git clone：复制仓库</li>
-<li>git init：初始化仓库</li>
-<li>git add：添加更新内容到索引中</li>
-<li>git diff：比较内容</li>
-<li>git status：获取当前项目状况</li>
-<li>git commit：提交</li>
-<li>git branch：分支相关</li>
-<li>git checkout：切换分支</li>
-<li>git merge：合并分支</li>
-<li>git reset：恢复版本</li>
-<li>git log：查看日志</li>
-</ul>
+</ol>
+<ol start="11">
+<li>瀑布开发模型：在开发过程中，整个系统的开发被划分成需求分析、设计实现、测试、集成和维护等阶段。这种划分本质上是把不同性质的项目内容分割到不同的阶段，而某个阶段则专注地进行某种任务。专注在许多情况下带来了高质量，单一流程的划分很容易带来资源浪费和失败风险的增加。如果在某一阶段，项目组只完成一组相同性质的任务，那么，团队中其他无关人员在这段时间里就无事可做了。项目的成果必须到最后阶段才能完成，中间任何步骤出现差错都有可能导致项目全盘失败，这样的项目开发风险很高。</li>
+<li>计划和流程–计划定义的是做什么（What）和什么时候做（When），项目执行完全根据计划实施，好的计划是项目成功的基础；流程是项目成功的保障，它定义了怎么做（How），按照标准流程做极其重要，可以避免许多不必要的问题。</li>
+<li>培养专业技能：开发技能是基础（数据结构、算法设计、设计模式和体系结构，了解不同的开发语言和平台的差异），开发技能不仅包括设计和实现功能的技术，还包括发布和部署代码、配置环境的技术。</li>
+<li><strong>白盒测试</strong>指测试人员可以直接访问内部数据结果、算法及其代码实现的测试。常见的方法包括编程应用接口测试（常用）、代码覆盖率测试（检验代码是否满足指定覆盖率的测试）、缺陷注入方法（错误以及临界条件下）等。白盒测试用最直接的方式，从根源上发现程序的缺陷，但是要求测试人员对实现细节比较了解并设计出有效的测试用例，这几乎是不可能的任务。</li>
+<li><strong>黑盒测试</strong>通过触发业务相关的功能点，检验集成条件下系统的正确性。但是进行黑盒测试的时候系统是集成的，在发现问题后需要打开“黑盒子”，用额外的工作定位问题的确切原因。<em>tips：白盒测试虽然比较复杂，但是能够精准定位出错误点。黑盒测试虽然简单但是只能知道有问题，但是不知道问题出在哪个地方，需要额外时间去定位问题。所以说老天是公平的，鱼与熊掌不可兼得。</em></li>
+<li>手工操作的测试方法，自动化测试方法。<strong>回归测试</strong>：除了需要测试新发布的内容，还必须验证已经存在的功能是否正确，存在的问题是否已经修复。这有进行回归测试才能保证所有功能在最新版本中的正确性。</li>
+<li>软件质量包括两个相关但截然不同的概念——功能性质量（Functional Quality）和结构性质量（Structural Quality）。功能性质量反映的是软件是否按照设计实现并满足相应功能性需求（Functional Requirements）；结构性质量反映的是软件是否满足相关的非功能性需求（Non-Functional Requirements，NFR）。</li>
+<li>测试就是获得量化指标的数值，主要有正确性（Correctness）、可靠性（Reliability）、易用性（Usability）、可移植性（Portability）、可迁移性（Migratability）、效率（Efficiency）、可维护性（Maintainability）、可扩展性（Scalability）、健壮性（Robustness）、安全性（Security）</li>
+<li>测试驱动开发的要点是先写测试程序，然后再编码实现使其通过测试。测试可以有效推动需求的实现。测试的目标是发现软件中存在的缺陷。</li>
+</ol>
 
       
     </div>
@@ -539,7 +501,7 @@
   </li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="http://wanghailin.info/2018/04/17/2018-04-17-git-command/" title="git基本命令使用（一）">http://wanghailin.info/2018/04/17/2018-04-17-git-command/</a>
+    <a href="http://wanghailin.info/2018/04/25/2018-04-25-software-test-zero2one/" title="读《从菜鸟到测试架构师：一个测试工程师的成长日记》">http://wanghailin.info/2018/04/25/2018-04-25-software-test-zero2one/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>
@@ -554,9 +516,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/求知/" rel="tag"> <i class="fa fa-tag"></i> 求知</a>
+            <a href="/tags/软件测试/" rel="tag"> <i class="fa fa-tag"></i> 软件测试</a>
           
-            <a href="/tags/学习笔记/" rel="tag"> <i class="fa fa-tag"></i> 学习笔记</a>
+            <a href="/tags/IT/" rel="tag"> <i class="fa fa-tag"></i> IT</a>
           
         </div>
       
@@ -569,8 +531,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/04/13/2018-04-13-qiao-ji-36-ji/" rel="next" title="三十六计，巧藏诗中">
-                <i class="fa fa-chevron-left"></i> 三十六计，巧藏诗中
+              <a href="/2018/04/21/2018-04-29-mobile-phone-photo/" rel="next" title="读《手机摄影从入门到精通》">
+                <i class="fa fa-chevron-left"></i> 读《手机摄影从入门到精通》
               </a>
             
           </div>
@@ -579,8 +541,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2018/04/21/2018-04-21-not-forget-why-go/" rel="prev" title="读《不要因为走得太远而忘记为什么出发》">
-                读《不要因为走得太远而忘记为什么出发》 <i class="fa fa-chevron-right"></i>
+              <a href="/2018/05/02/2018-05-02-selenium2-auto-test-base-on-python/" rel="prev" title="读《selenium2自动化测试实战--基于python语言》">
+                读《selenium2自动化测试实战--基于python语言》 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -659,17 +621,8 @@ var jiathis_config={
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-            文章目录
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
-            站点概览
-          </li>
-        </ul>
-      
 
-      <section class="site-overview-wrap sidebar-panel">
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -761,22 +714,6 @@ var jiathis_config={
         </div>
       </section>
 
-      
-      <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-              
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#小结"><span class="nav-number">1.</span> <span class="nav-text">小结</span></a></li></ol></div>
-            
-
-          </div>
-        </section>
-      <!--/noindex-->
       
 
       

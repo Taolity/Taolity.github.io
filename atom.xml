@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://wanghailin.info/"/>
-  <updated>2018-04-21T11:53:30.505Z</updated>
+  <updated>2018-05-04T12:05:12.543Z</updated>
   <id>http://wanghailin.info/</id>
   
   <author>
@@ -15,6 +15,76 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>读《selenium2自动化测试实战--基于python语言》</title>
+    <link href="http://wanghailin.info/2018/05/02/2018-05-02-selenium2-auto-test-base-on-python/"/>
+    <id>http://wanghailin.info/2018/05/02/2018-05-02-selenium2-auto-test-base-on-python/</id>
+    <published>2018-05-01T16:00:00.000Z</published>
+    <updated>2018-05-04T12:05:12.543Z</updated>
+    
+    <content type="html"><![CDATA[<a id="more"></a> <h2 id="1-1-软件测试分类"><a href="#1-1-软件测试分类" class="headerlink" title="1.1 软件测试分类"></a>1.1 软件测试分类</h2><p>1.根据项目流程阶段划分软件测试</p><ul><li>单元测试：单元测试（或模块测试）是对程序中的单个子程序或具有独立功能的代码进行测试的过程。</li><li>集成测试：集成测试是在单元测试的基础上，先通过单元模块组成系统或子系统，再进行测试。重点是检查模块之间的借口是否正确。</li><li>系统测试：系统测试是针对整个产品系统进行的测试，验证系统是否满足需求规格的定义，以及软件系统的正确性和性能等是否满足其需求规格的要求。</li><li>验收测试：验收测试是部署软件之前的最后一个测试阶段。验收测试的目的是确保软件准备就绪，向软件购买者展示该软件系统能够满足用户的需求。</li></ul><p>2.白盒测试、黑盒测试、灰盒测试(主要是根据软件测试工作中对软件代码的可见程度进行划分)</p><ul><li>黑盒测试指的是把被测的软件看作一个黑盒子，我们不去关心盒子里面的结构是什么样子的，只关心软件的输入数据和输出结果。   它只检查程序呈现给用户的功能是否按照需求规格说明书的规定正常使用、程序是否能接收输入数据并产生正确的输出信息。黑盒测试着眼于程序外部结构，不考虑内部逻辑结构，主要针对软件界面和软件功能进行测试。</li><li><p>白盒测试，指的是把盒子打开，去研究里面的源代码和程序执行结果。 它是按照程序的内部的结构测试程序，通过测试来检测产品内部动作是否按照设计规格说明书的规定正常进行，检验程序中的每条逻辑路径是否都能够按预定要求正确工作。</p></li><li><p>灰盒测试，介于黑盒测试和白盒测试之间。</p></li></ul><p>3.功能测试与性能测试</p><ul><li>功能测试，功能测试主要检查实际功能是否符合用户的需求。功能测试又可以分为很多种：逻辑功能测试、界面测试、易用性测试、安装测试、兼容性测试等</li><li>性能测试，是通过自动化的测试工具模拟多种正常、峰值以及异常负载条件对系统的各项性能指标进行的测试。主要包括时间性能和空间性能。</li></ul><p>4.手工测试和自动化测试</p><ul><li>手工测试就是由测试人员一个一个地去执行测试用例，通过键盘鼠标等输入一些参数，并查看返回结果是否符合预期结果。</li><li>自动化测试是把以人为驱动的测试行为转化为机器执行的一种过程。又分为功能性自动化测试和性能自动化测试。</li></ul><p>5.冒烟测试、回归测试、随机测试、探索性测试和安全测试</p><ul><li>冒烟测试，是指对一个新版本进行大规模的系统测试之前，先验证一下软件的基本功能是否实现，是否具备可测性。</li><li>回归测试是指修改了旧代码之后，重新进行测试以确认修改后没有引入新的错误或导致其他代码产生错误。</li><li>随机测试，是指测试中的所有输入数据都是随机生成的，其目的是模拟用户的真实操作，并发现一些边缘性的错误。</li><li>探索性测试，是一种测试思维技术。强调在碰到问题时及时改变测试策略。</li><li>安全测试，是在IT软件产品的生命周期中，特别是产品开发基本完成至发布阶段，对产品进行检验以验证产品符合安全需求定义和产品质量标准的过程。</li></ul><h2 id="1-2-分层的自动化测试"><a href="#1-2-分层的自动化测试" class="headerlink" title="1.2 分层的自动化测试"></a>1.2 分层的自动化测试</h2><ul><li>单元自动化测试</li><li>接口自动化测试</li><li>UI自动化测试</li></ul><h2 id="1-3-什么样的项目适合自动化测试"><a href="#1-3-什么样的项目适合自动化测试" class="headerlink" title="1.3 什么样的项目适合自动化测试"></a>1.3 什么样的项目适合自动化测试</h2><ol><li>任务测试明确，不会明确变动</li><li>每日构建后的测试验证</li><li>比较频繁的回归测试</li><li>软件系统界面稳定，变动少</li><li>需要在多平台上运行的相同测试案例、组合遍历型的测试，大量的重复任务</li><li>软件维护周期长</li><li>项目进度压力不太大</li><li>被测软件系统开发较为规范，能够保证系统的可测试性</li><li>具备大量的自动化测试平台</li><li>测试人员具备较强的编程能力</li></ol><p>并非以上10个条件都满足才能进行自动化测试，一般只需满足一下三个条件就可以对其进行自动化测试：</p><ol><li>软件需求变动不频繁</li><li>项目周期较长</li><li>自动化测试脚本可重复使用<h2 id="1-4-自动化测试及工具简介"><a href="#1-4-自动化测试及工具简介" class="headerlink" title="1.4 自动化测试及工具简介"></a>1.4 自动化测试及工具简介</h2>自动化测试的概念有广义和狭义之分：广义上来讲，所有借助工具来辅助进行软件测试的方式都可以称为自动化测试；狭义上来讲，主要是指基于UI蹭的功能自动化测试。常见的自动化测试工具有：</li><li>UFT(Unified Functional Testing)—最主流</li><li>Robot Framework（基于python，强大）</li><li>Watir（Web Application Testing in Ruby）</li><li>Selenium（多平台，广泛应用）<h2 id="1-5-selenium工具介绍"><a href="#1-5-selenium工具介绍" class="headerlink" title="1.5 selenium工具介绍"></a>1.5 selenium工具介绍</h2>1.什么是selenium？</li></ol><p>selenium主要用于web应用程序的自动化测试，但并不局限于此，它还支持所有基于web的管理任务自动化。</p><p>selenium的特点如下：</p><ul><li>开源，免费；</li><li>多浏览器支持：Firefox，Chrome，IE,Opera，Edge；</li><li>多平台支持：Linux，Windows，MAC；</li><li>多语言支持：Java，python，Ruby，C#，JavaScript，C++；</li><li>对web页面有良好的支持；</li><li>简单（API简单）、灵活（用于开发语言驱动）；</li><li>支持分布式测试用例执行。</li></ul>]]></content>
+    
+    <summary type="html">
+    
+      厚积薄发！
+    
+    </summary>
+    
+      <category term="读书笔记" scheme="http://wanghailin.info/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
+    
+    
+      <category term="读书笔记" scheme="http://wanghailin.info/tags/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
+    
+      <category term="软件测试" scheme="http://wanghailin.info/tags/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>读《从菜鸟到测试架构师：一个测试工程师的成长日记》</title>
+    <link href="http://wanghailin.info/2018/04/25/2018-04-25-software-test-zero2one/"/>
+    <id>http://wanghailin.info/2018/04/25/2018-04-25-software-test-zero2one/</id>
+    <published>2018-04-24T16:00:00.000Z</published>
+    <updated>2018-05-04T12:02:34.144Z</updated>
+    
+    <content type="html"><![CDATA[<a id="more"></a> <ol><li>如何确保软件质量、减少质量问题给企业及用户带来的隐患，是软件测试工作的核心。</li><li>在大型软件开发团队中，测试被分成很多种类和步骤，每种测试有针对性地模拟使用测试对象的场景，并试图找出测试对象的潜在问题和缺陷(Bug)。在确定原因后，制定严谨完善的解决方案并根据方案修复缺陷。</li><li>测试其实是发现并解决问题的过程，而其目标则是让软件产品以尽可能高的质量交付给客户，使软件产品中存在的问题尽可能少。</li><li>除了小型项目，进行完全（各种输入和前提条件的组合）的测试是不可行的。可行的方法是运用<strong>风险分析</strong>和不同系统功能的<strong>测试优先级</strong>，来确定测试的关注点，从而替代穷尽测试。</li><li><strong>单元测试</strong>，是和开发最接近的一种测试。开发人员编写单元测试用例并执行，验证单元模块是否得出预期的结果。测试驱动开发（Test Driven Development，TDD）。测试驱动开发的核心就是把单元测试做好，功能开发以通过相应的单元测试用例为目标。单元测试是粒度最小的软件测试，小粒度能保证复杂系统中的每个“螺丝钉”都质量合格。</li><li><strong>功能测试</strong>是通过黑盒子模式发现代码集成后存在的功能问题的测试。关注的重点是系统的功能。通过执行自动或手动的测试用例，可以验证相应的功能点是否正确。<em>单元测试关注的是一个最小的代码片段(比如一个类或接口）,功能测试关注的是一个完整的业务功能</em>。</li><li><strong>性能测试</strong>是重点验证软件的<strong>非功能性需求</strong>的测试。企业级软件通常用于应对复杂苛刻的用户场景。在软件设计和安装的过程中，有许多细节能提供软件的性能，包括吞吐率、稳定性、可靠性等。性能测试通过自动化的方法模拟真实用户并发访问的场景，以验证系统的性能指标或发现其性能瓶颈。</li><li><p>苦练基本功：了解开发平台和方式–操作系统（Windows、Unix、Linux）、搭建测试环境（执行构建测试–使用构建化的脚本、自动化安装）</p><p> 正确的流程和步骤一定要及时记录。有了流程和步骤的指引，可以避免大量不必要的重复劳动。</p></li><li><p>中间件（Middleware）是提供系统软件和应用软件之间连接的软件。</p></li><li><p>敏捷开发（Agile Development）。迭代开发（Iterative Development）和增量开发（Incremental Development）。</p><p><strong>迭代开发</strong>是一种“重复时序安排”的开发方式。迭代开发把一个完整的瀑布模型开发流程分成多个迭代，每个迭代可以看成是独立的开发过程，其中包含了项目的主要步骤，如设计、开发和测试等。把完整过程分成多个持续时间较短的迭代，其好处是生产的周期变短了，每个完整的周期都会产出相应的产品，这种方式有利于在完整项目开发的过程中跟踪和控制开发进度及产品质量。</p><p>增量开发用的则是一种“分段完成”的策略。在增量开发模式中，系统中不同的部分被安排在多个阶段完成，各个部分完成后再集成到系统中。</p></li></ol><ol start="11"><li>瀑布开发模型：在开发过程中，整个系统的开发被划分成需求分析、设计实现、测试、集成和维护等阶段。这种划分本质上是把不同性质的项目内容分割到不同的阶段，而某个阶段则专注地进行某种任务。专注在许多情况下带来了高质量，单一流程的划分很容易带来资源浪费和失败风险的增加。如果在某一阶段，项目组只完成一组相同性质的任务，那么，团队中其他无关人员在这段时间里就无事可做了。项目的成果必须到最后阶段才能完成，中间任何步骤出现差错都有可能导致项目全盘失败，这样的项目开发风险很高。</li><li>计划和流程–计划定义的是做什么（What）和什么时候做（When），项目执行完全根据计划实施，好的计划是项目成功的基础；流程是项目成功的保障，它定义了怎么做（How），按照标准流程做极其重要，可以避免许多不必要的问题。</li><li>培养专业技能：开发技能是基础（数据结构、算法设计、设计模式和体系结构，了解不同的开发语言和平台的差异），开发技能不仅包括设计和实现功能的技术，还包括发布和部署代码、配置环境的技术。</li><li><strong>白盒测试</strong>指测试人员可以直接访问内部数据结果、算法及其代码实现的测试。常见的方法包括编程应用接口测试（常用）、代码覆盖率测试（检验代码是否满足指定覆盖率的测试）、缺陷注入方法（错误以及临界条件下）等。白盒测试用最直接的方式，从根源上发现程序的缺陷，但是要求测试人员对实现细节比较了解并设计出有效的测试用例，这几乎是不可能的任务。</li><li><strong>黑盒测试</strong>通过触发业务相关的功能点，检验集成条件下系统的正确性。但是进行黑盒测试的时候系统是集成的，在发现问题后需要打开“黑盒子”，用额外的工作定位问题的确切原因。<em>tips：白盒测试虽然比较复杂，但是能够精准定位出错误点。黑盒测试虽然简单但是只能知道有问题，但是不知道问题出在哪个地方，需要额外时间去定位问题。所以说老天是公平的，鱼与熊掌不可兼得。</em></li><li>手工操作的测试方法，自动化测试方法。<strong>回归测试</strong>：除了需要测试新发布的内容，还必须验证已经存在的功能是否正确，存在的问题是否已经修复。这有进行回归测试才能保证所有功能在最新版本中的正确性。</li><li>软件质量包括两个相关但截然不同的概念——功能性质量（Functional Quality）和结构性质量（Structural Quality）。功能性质量反映的是软件是否按照设计实现并满足相应功能性需求（Functional Requirements）；结构性质量反映的是软件是否满足相关的非功能性需求（Non-Functional Requirements，NFR）。</li><li>测试就是获得量化指标的数值，主要有正确性（Correctness）、可靠性（Reliability）、易用性（Usability）、可移植性（Portability）、可迁移性（Migratability）、效率（Efficiency）、可维护性（Maintainability）、可扩展性（Scalability）、健壮性（Robustness）、安全性（Security）</li><li>测试驱动开发的要点是先写测试程序，然后再编码实现使其通过测试。测试可以有效推动需求的实现。测试的目标是发现软件中存在的缺陷。</li></ol>]]></content>
+    
+    <summary type="html">
+    
+      厚积薄发！
+    
+    </summary>
+    
+      <category term="读书笔记" scheme="http://wanghailin.info/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
+    
+    
+      <category term="软件测试" scheme="http://wanghailin.info/tags/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95/"/>
+    
+      <category term="IT" scheme="http://wanghailin.info/tags/IT/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>读《手机摄影从入门到精通》</title>
+    <link href="http://wanghailin.info/2018/04/21/2018-04-29-mobile-phone-photo/"/>
+    <id>http://wanghailin.info/2018/04/21/2018-04-29-mobile-phone-photo/</id>
+    <published>2018-04-20T16:00:00.000Z</published>
+    <updated>2018-05-04T12:03:15.204Z</updated>
+    
+    <content type="html"><![CDATA[<a id="more"></a> <blockquote><p>摄影的本质就是记录影像，凝固瞬间，表达作者的意图、思想和情感。</p></blockquote><h2 id="常见问题及解决方法"><a href="#常见问题及解决方法" class="headerlink" title="常见问题及解决方法"></a>常见问题及解决方法</h2><ul><li>拍得虚——轻按稳拿对焦</li><li>拍得黑——增加曝光补偿开启闪光灯模式</li><li>拍得歪——开启辅助线辅助构图</li><li>颜色淡——使用手机滤镜</li><li>背景乱——用变焦解决</li><li>会偏色——调整手机白平衡</li></ul><h2 id="注意事项（道法自然）"><a href="#注意事项（道法自然）" class="headerlink" title="注意事项（道法自然）"></a>注意事项（道法自然）</h2><ul><li>作者意图（表达的东西）</li><li>角度</li><li>光线</li><li>构图</li><li>技术</li><li>后期 </li><li>少即是多</li><li>简即是真</li></ul><h2 id="构图九套路"><a href="#构图九套路" class="headerlink" title="构图九套路"></a>构图九套路</h2><ul><li>横屏竖要直</li><li>斜就斜到底</li><li>重点就要吸引人（黄金分割法、三分法）</li><li>妙在画框中（妙用主题周围环境）</li><li>线条吸引眼球</li><li>空就空大点</li><li>挤就挤满点</li><li>稳定才是硬道理</li><li>两边拍一样</li></ul><h2 id="APP推荐"><a href="#APP推荐" class="headerlink" title="APP推荐"></a>APP推荐</h2><ul><li>海报（POCO、Phoster、PicsStudio、TextCutiePro、Piclab）</li><li>明信片（留白、美卡）</li><li>局部色彩特效（Color Splash、色彩大师、AfterFocus）</li><li>画面背景虚化（Afterfocus、LiveDOF、Layrs）</li><li>营造不一样的画面效果（Camera 360、VSCOcam、Instagram、snapseed、Mix滤镜大师）</li><li>加文字（黄油相机、Phonto、over、nice）</li><li>给人加修饰、涂鸦（LINE Camera、Line Brush、SigNote）</li><li>画一个搞笑的妆（美图贴贴、百变魔图、美图秀秀、玩图、创意相机、搞笑相机、天天P图）</li><li>美女修成记（美颜相机、Fotor、Photo Makeover、Perfect 365、美图秀秀）</li><li>制造有味道的素描照片（素描大师、XnSketch、相机360、PowerCam、CmoioBookCamera）</li><li>画中画（画中画、玩图、百变魔图、POCO美人相机）</li><li>把美丽的风景画成油画（PhotoViva、Brushstroke、转手绘、彩漫相机、魔漫相机）</li><li>典型画面既视感（手机APP、织图、FUGUIFILM）</li><li>美食美色（食色、美食相机、食日谈、Moldiv）</li></ul>]]></content>
+    
+    <summary type="html">
+    
+      无他，唯手熟尔！
+    
+    </summary>
+    
+      <category term="读书笔记" scheme="http://wanghailin.info/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
+    
+    
+      <category term="实用技巧，求知" scheme="http://wanghailin.info/tags/%E5%AE%9E%E7%94%A8%E6%8A%80%E5%B7%A7%EF%BC%8C%E6%B1%82%E7%9F%A5/"/>
+    
+  </entry>
   
   <entry>
     <title>读《不要因为走得太远而忘记为什么出发》</title>

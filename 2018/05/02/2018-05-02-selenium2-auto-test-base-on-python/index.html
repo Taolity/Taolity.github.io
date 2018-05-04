@@ -88,7 +88,7 @@
 
 
 
-  <meta name="keywords" content="求知,学习笔记," />
+  <meta name="keywords" content="读书笔记,软件测试," />
 
 
 
@@ -99,18 +99,18 @@
 
 
 
-<meta name="description" content="万丈高楼平地起，夯实基础为第一。">
-<meta name="keywords" content="求知,学习笔记">
+<meta name="description" content="厚积薄发！">
+<meta name="keywords" content="读书笔记,软件测试">
 <meta property="og:type" content="article">
-<meta property="og:title" content="git基本命令使用（一）">
-<meta property="og:url" content="http://wanghailin.info/2018/04/17/2018-04-17-git-command/index.html">
+<meta property="og:title" content="读《selenium2自动化测试实战--基于python语言》">
+<meta property="og:url" content="http://wanghailin.info/2018/05/02/2018-05-02-selenium2-auto-test-base-on-python/index.html">
 <meta property="og:site_name" content="学而勤习之">
-<meta property="og:description" content="万丈高楼平地起，夯实基础为第一。">
+<meta property="og:description" content="厚积薄发！">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-04-21T11:42:30.870Z">
+<meta property="og:updated_time" content="2018-05-04T12:05:12.543Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="git基本命令使用（一）">
-<meta name="twitter:description" content="万丈高楼平地起，夯实基础为第一。">
+<meta name="twitter:title" content="读《selenium2自动化测试实战--基于python语言》">
+<meta name="twitter:description" content="厚积薄发！">
 
 
 
@@ -140,13 +140,13 @@
 
 
 
-  <link rel="canonical" href="http://wanghailin.info/2018/04/17/2018-04-17-git-command/"/>
+  <link rel="canonical" href="http://wanghailin.info/2018/05/02/2018-05-02-selenium2-auto-test-base-on-python/"/>
 
 
 
 
 
-  <title>git基本命令使用（一） | 学而勤习之</title>
+  <title>读《selenium2自动化测试实战--基于python语言》 | 学而勤习之</title>
   
 
 
@@ -283,7 +283,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://wanghailin.info/2018/04/17/2018-04-17-git-command/">
+    <link itemprop="mainEntityOfPage" href="http://wanghailin.info/2018/05/02/2018-05-02-selenium2-auto-test-base-on-python/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Hailin">
@@ -300,7 +300,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">git基本命令使用（一）</h1>
+          <h1 class="post-title" itemprop="name headline">读《selenium2自动化测试实战--基于python语言》</h1>
         
 
         <div class="post-meta">
@@ -312,8 +312,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-04-17T00:00:00+08:00">
-                2018-04-17
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-05-02T00:00:00+08:00">
+                2018-05-02
               </time>
             
 
@@ -335,8 +335,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/笔记/" itemprop="url" rel="index">
-                    <span itemprop="name">笔记</span>
+                  <a href="/categories/读书笔记/" itemprop="url" rel="index">
+                    <span itemprop="name">读书笔记</span>
                   </a>
                 </span>
 
@@ -371,7 +371,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  903
+                  1,560
                 </span>
               
 
@@ -387,7 +387,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  3
+                  5
                 </span>
               
             </div>
@@ -395,7 +395,7 @@
 
           
               <div class="post-description">
-                  万丈高楼平地起，夯实基础为第一。
+                  厚积薄发！
               </div>
           
 
@@ -413,72 +413,76 @@
 
       
         <a id="more"></a> 
-<p>1.基本配置</p>
+<h2 id="1-1-软件测试分类"><a href="#1-1-软件测试分类" class="headerlink" title="1.1 软件测试分类"></a>1.1 软件测试分类</h2><p>1.根据项目流程阶段划分软件测试</p>
 <ul>
-<li>git全局配置文件 命令：git config –global &lt;配置名称&gt;&lt;配置的值&gt;  </li>
-<li>可使用 ls -al 或者是cat ~/.gitconfig 查看配置文件</li>
+<li>单元测试：单元测试（或模块测试）是对程序中的单个子程序或具有独立功能的代码进行测试的过程。</li>
+<li>集成测试：集成测试是在单元测试的基础上，先通过单元模块组成系统或子系统，再进行测试。重点是检查模块之间的借口是否正确。</li>
+<li>系统测试：系统测试是针对整个产品系统进行的测试，验证系统是否满足需求规格的定义，以及软件系统的正确性和性能等是否满足其需求规格的要求。</li>
+<li>验收测试：验收测试是部署软件之前的最后一个测试阶段。验收测试的目的是确保软件准备就绪，向软件购买者展示该软件系统能够满足用户的需求。</li>
 </ul>
-<p>2.clone一个仓库</p>
+<p>2.白盒测试、黑盒测试、灰盒测试(主要是根据软件测试工作中对软件代码的可见程度进行划分)</p>
 <ul>
-<li>git clone <a href="https://github.com/username/仓库名" target="_blank" rel="noopener">https://github.com/username/仓库名</a> </li>
-<li>git init 初始化仓库</li>
-</ul>
-<p>3.正常的工作流程<br>git的基本流程如下：</p>
-<ul>
-<li>创建或修改文件</li>
-<li>使用git add命令添加新创建或修改的文件到本地的缓存区（Index）</li>
-<li>使用git commit命令提交到本地代码库</li>
-<li><p>（可选，有的时候并没有可以同步的远端代码库）使用git push命令将本地代码库同步到远端代码库</p>
-<p>echo “添加内容”&gt;&gt; 文件名<br>git status 查看当前git仓库的状态<br>git diff –cached 查看缓存区中的那些文件被修改</p>
+<li>黑盒测试指的是把被测的软件看作一个黑盒子，我们不去关心盒子里面的结构是什么样子的，只关心软件的输入数据和输出结果。   它只检查程序呈现给用户的功能是否按照需求规格说明书的规定正常使用、程序是否能接收输入数据并产生正确的输出信息。黑盒测试着眼于程序外部结构，不考虑内部逻辑结构，主要针对软件界面和软件功能进行测试。</li>
+<li><p>白盒测试，指的是把盒子打开，去研究里面的源代码和程序执行结果。 它是按照程序的内部的结构测试程序，通过测试来检测产品内部动作是否按照设计规格说明书的规定正常进行，检验程序中的每条逻辑路径是否都能够按预定要求正确工作。</p>
+</li>
+<li><p>灰盒测试，介于黑盒测试和白盒测试之间。</p>
 </li>
 </ul>
-<p>5.分支与合并</p>
-<p>分支</p>
-<blockquote>
-<p>Git的分支可以让你在主线（master分支）之外进行代码提交，同时又不会影响代码库主线。分支的作用体现在多人协作开发中，比如一个团队开发软件，你负责独立的一个功能需要一个月的时间来完成，你就可以创建一个分支，只把该功能的代码提交到这个分支，而其他同事仍然可以继续使用主线开发，你每天的提交不会对他们造成任何影响。当你完成功能后，测试通过再把你的功能分支合并到主线。</p>
-</blockquote>
+<p>3.功能测试与性能测试</p>
 <ul>
-<li>git branch 分支名  创建分支</li>
-<li>git checkout 分支名  切换到其他分支</li>
-<li>git branch -d  只能删除那些已经被当前分支的合并的分支.</li>
-<li>git branch –D  强制删除某个分支</li>
+<li>功能测试，功能测试主要检查实际功能是否符合用户的需求。功能测试又可以分为很多种：逻辑功能测试、界面测试、易用性测试、安装测试、兼容性测试等</li>
+<li>性能测试，是通过自动化的测试工具模拟多种正常、峰值以及异常负载条件对系统的各项性能指标进行的测试。主要包括时间性能和空间性能。</li>
 </ul>
-<p>合并</p>
+<p>4.手工测试和自动化测试</p>
 <ul>
-<li>git reset –hard HEAD^ 撤销合并<blockquote>
-<p>快速向前合并<br>还有一种需要特殊对待的情况，在前面没有提到。通常，一个合并会产生一个合并提交(commit), 把两个父分支里的每一行内容都合并进来。<br>但是，如果当前的分支和另一个分支没有内容上的差异，就是说当前分支的每一个提交(commit)都已经存在另一个分支里了，git 就会执行一个“快速向前”(fast forward)操作；git 不创建任何新的提交(commit),只是将当前分支指向合并进来的分支。</p>
-</blockquote>
-</li>
+<li>手工测试就是由测试人员一个一个地去执行测试用例，通过键盘鼠标等输入一些参数，并查看返回结果是否符合预期结果。</li>
+<li>自动化测试是把以人为驱动的测试行为转化为机器执行的一种过程。又分为功能性自动化测试和性能自动化测试。</li>
 </ul>
-<p>6.git 日志</p>
+<p>5.冒烟测试、回归测试、随机测试、探索性测试和安全测试</p>
 <ul>
-<li>git log 查看日志</li>
-<li>git log –stat 日志统计</li>
-<li>git log –pretty=oneline 或 git log –pretty=short pretty参数可以使用若干表现格式<blockquote>
-<p>你也可用medium,full,fuller,email 或raw。 如果这些格式不完全符合你的需求， 你也可以用–pretty=format参数定义格式。</p>
-</blockquote>
-</li>
+<li>冒烟测试，是指对一个新版本进行大规模的系统测试之前，先验证一下软件的基本功能是否实现，是否具备可测性。</li>
+<li>回归测试是指修改了旧代码之后，重新进行测试以确认修改后没有引入新的错误或导致其他代码产生错误。</li>
+<li>随机测试，是指测试中的所有输入数据都是随机生成的，其目的是模拟用户的真实操作，并发现一些边缘性的错误。</li>
+<li>探索性测试，是一种测试思维技术。强调在碰到问题时及时改变测试策略。</li>
+<li>安全测试，是在IT软件产品的生命周期中，特别是产品开发基本完成至发布阶段，对产品进行检验以验证产品符合安全需求定义和产品质量标准的过程。</li>
 </ul>
-<blockquote>
-<p>–graph 选项可以可视化你的提交图(commit graph)，会用ASCII字符来画出一个很漂亮的提交历史(commit history)线<br>日志记录可以按不同的顺序来显示。如果你要指定一个特定的顺序，可以为git log命令添加顺序参数。</p>
-</blockquote>
-<p>按默认情况，提交会按逆时间顺序显示，可以指定–topo-order参数，让提交按拓扑顺序来显示(就是子提交在它们的父提交前显示):</p>
-<blockquote>
-<p>$ git log –pretty=format:’%h : %s’ –topo-order –graph<br>也可以使用 –reverse参数来逆向显示所有提交日志</p>
-</blockquote>
-<h2 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h2><ul>
-<li>git config：配置相关信息</li>
-<li>git clone：复制仓库</li>
-<li>git init：初始化仓库</li>
-<li>git add：添加更新内容到索引中</li>
-<li>git diff：比较内容</li>
-<li>git status：获取当前项目状况</li>
-<li>git commit：提交</li>
-<li>git branch：分支相关</li>
-<li>git checkout：切换分支</li>
-<li>git merge：合并分支</li>
-<li>git reset：恢复版本</li>
-<li>git log：查看日志</li>
+<h2 id="1-2-分层的自动化测试"><a href="#1-2-分层的自动化测试" class="headerlink" title="1.2 分层的自动化测试"></a>1.2 分层的自动化测试</h2><ul>
+<li>单元自动化测试</li>
+<li>接口自动化测试</li>
+<li>UI自动化测试</li>
+</ul>
+<h2 id="1-3-什么样的项目适合自动化测试"><a href="#1-3-什么样的项目适合自动化测试" class="headerlink" title="1.3 什么样的项目适合自动化测试"></a>1.3 什么样的项目适合自动化测试</h2><ol>
+<li>任务测试明确，不会明确变动</li>
+<li>每日构建后的测试验证</li>
+<li>比较频繁的回归测试</li>
+<li>软件系统界面稳定，变动少</li>
+<li>需要在多平台上运行的相同测试案例、组合遍历型的测试，大量的重复任务</li>
+<li>软件维护周期长</li>
+<li>项目进度压力不太大</li>
+<li>被测软件系统开发较为规范，能够保证系统的可测试性</li>
+<li>具备大量的自动化测试平台</li>
+<li>测试人员具备较强的编程能力</li>
+</ol>
+<p>并非以上10个条件都满足才能进行自动化测试，一般只需满足一下三个条件就可以对其进行自动化测试：</p>
+<ol>
+<li>软件需求变动不频繁</li>
+<li>项目周期较长</li>
+<li>自动化测试脚本可重复使用<h2 id="1-4-自动化测试及工具简介"><a href="#1-4-自动化测试及工具简介" class="headerlink" title="1.4 自动化测试及工具简介"></a>1.4 自动化测试及工具简介</h2>自动化测试的概念有广义和狭义之分：广义上来讲，所有借助工具来辅助进行软件测试的方式都可以称为自动化测试；狭义上来讲，主要是指基于UI蹭的功能自动化测试。常见的自动化测试工具有：</li>
+<li>UFT(Unified Functional Testing)—最主流</li>
+<li>Robot Framework（基于python，强大）</li>
+<li>Watir（Web Application Testing in Ruby）</li>
+<li>Selenium（多平台，广泛应用）<h2 id="1-5-selenium工具介绍"><a href="#1-5-selenium工具介绍" class="headerlink" title="1.5 selenium工具介绍"></a>1.5 selenium工具介绍</h2>1.什么是selenium？</li>
+</ol>
+<p>selenium主要用于web应用程序的自动化测试，但并不局限于此，它还支持所有基于web的管理任务自动化。</p>
+<p>selenium的特点如下：</p>
+<ul>
+<li>开源，免费；</li>
+<li>多浏览器支持：Firefox，Chrome，IE,Opera，Edge；</li>
+<li>多平台支持：Linux，Windows，MAC；</li>
+<li>多语言支持：Java，python，Ruby，C#，JavaScript，C++；</li>
+<li>对web页面有良好的支持；</li>
+<li>简单（API简单）、灵活（用于开发语言驱动）；</li>
+<li>支持分布式测试用例执行。</li>
 </ul>
 
       
@@ -539,7 +543,7 @@
   </li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="http://wanghailin.info/2018/04/17/2018-04-17-git-command/" title="git基本命令使用（一）">http://wanghailin.info/2018/04/17/2018-04-17-git-command/</a>
+    <a href="http://wanghailin.info/2018/05/02/2018-05-02-selenium2-auto-test-base-on-python/" title="读《selenium2自动化测试实战--基于python语言》">http://wanghailin.info/2018/05/02/2018-05-02-selenium2-auto-test-base-on-python/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>
@@ -554,9 +558,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/求知/" rel="tag"> <i class="fa fa-tag"></i> 求知</a>
+            <a href="/tags/读书笔记/" rel="tag"> <i class="fa fa-tag"></i> 读书笔记</a>
           
-            <a href="/tags/学习笔记/" rel="tag"> <i class="fa fa-tag"></i> 学习笔记</a>
+            <a href="/tags/软件测试/" rel="tag"> <i class="fa fa-tag"></i> 软件测试</a>
           
         </div>
       
@@ -569,8 +573,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/04/13/2018-04-13-qiao-ji-36-ji/" rel="next" title="三十六计，巧藏诗中">
-                <i class="fa fa-chevron-left"></i> 三十六计，巧藏诗中
+              <a href="/2018/04/25/2018-04-25-software-test-zero2one/" rel="next" title="读《从菜鸟到测试架构师：一个测试工程师的成长日记》">
+                <i class="fa fa-chevron-left"></i> 读《从菜鸟到测试架构师：一个测试工程师的成长日记》
               </a>
             
           </div>
@@ -578,10 +582,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/04/21/2018-04-21-not-forget-why-go/" rel="prev" title="读《不要因为走得太远而忘记为什么出发》">
-                读《不要因为走得太远而忘记为什么出发》 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -771,7 +771,7 @@ var jiathis_config={
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#小结"><span class="nav-number">1.</span> <span class="nav-text">小结</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-1-软件测试分类"><span class="nav-number">1.</span> <span class="nav-text">1.1 软件测试分类</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-2-分层的自动化测试"><span class="nav-number">2.</span> <span class="nav-text">1.2 分层的自动化测试</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-3-什么样的项目适合自动化测试"><span class="nav-number">3.</span> <span class="nav-text">1.3 什么样的项目适合自动化测试</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-4-自动化测试及工具简介"><span class="nav-number">4.</span> <span class="nav-text">1.4 自动化测试及工具简介</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-5-selenium工具介绍"><span class="nav-number">5.</span> <span class="nav-text">1.5 selenium工具介绍</span></a></li></ol></div>
             
 
           </div>
