@@ -1,0 +1,1161 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+<script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
+<link href="//cdn.bootcss.com/pace/1.0.2/themes/pink/pace-theme-flash.css" rel="stylesheet">
+
+<script>
+    (function(){
+        if(''){
+            if (prompt('请输入文章密码') !== ''){
+                alert('密码错误！');
+                history.back();
+            }
+        }
+    })();
+</script>
+
+
+  
+  
+    
+    
+  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
+  <link href="/lib/pace/pace-theme-minimal.min.css?v=1.0.2" rel="stylesheet">
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="数据分析,算法," />
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="数据分析面试常见知识点">
+<meta name="keywords" content="数据分析,算法">
+<meta property="og:type" content="article">
+<meta property="og:title" content="数据分析之路|面试题整理之常见算法篇">
+<meta property="og:url" content="http://wanghailin.info/2018/03/20/2018-03-20-data-analyst-interview-algorithm/index.html">
+<meta property="og:site_name" content="学而勤习之">
+<meta property="og:description" content="数据分析面试常见知识点">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2018-04-01T12:08:59.088Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="数据分析之路|面试题整理之常见算法篇">
+<meta name="twitter:description" content="数据分析面试常见知识点">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":"fasle","scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://wanghailin.info/2018/03/20/2018-03-20-data-analyst-interview-algorithm/"/>
+
+
+
+
+
+  <title>数据分析之路|面试题整理之常见算法篇 | 学而勤习之</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">学而勤习之</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">记录成就伟大</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://wanghailin.info/2018/03/20/2018-03-20-data-analyst-interview-algorithm/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Hailin">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="学而勤习之">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">数据分析之路|面试题整理之常见算法篇</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-03-20T00:00:00+08:00">
+                2018-03-20
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/技术/" itemprop="url" rel="index">
+                    <span itemprop="name">技术</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+            <span class="post-meta-divider">|</span>
+            <span class="page-pv">本文总阅读量 <i class="fa fa-file-o"></i>
+            <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>次
+            </span>
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  1,472
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  7
+                </span>
+              
+            </div>
+          
+
+          
+              <div class="post-description">
+                  数据分析面试常见知识点
+              </div>
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <a id="more"></a> 
+<h1 id="几种常见排序算法及实现"><a href="#几种常见排序算法及实现" class="headerlink" title="几种常见排序算法及实现"></a>几种常见排序算法及实现</h1><h1 id="1-冒泡排序（Bubble-Sort）"><a href="#1-冒泡排序（Bubble-Sort）" class="headerlink" title="1.冒泡排序（Bubble Sort）"></a>1.冒泡排序（Bubble Sort）</h1><blockquote>
+<p>  相邻两个元素作比较，冒泡排序是稳定的。算法时间复杂度是O(n^2)。<br>  基本思想：<br>  1）第一轮比较，找出最大的元素；第二轮找出次大的元素……</p>
+<p>  2）若有N个元素进行排序，一共比较N-1轮，第M轮要进行N-M次比较；</p>
+<p>  3）代码实现：</p>
+<pre><code>  static void BubbleSort(int[] arr){
+for (int times=1,times&lt;=arr.length-1,times++)  //比较arr.length-1轮
+{
+  for (int i=1,i&lt;=arr.length-times,i++)  //每一轮比较arr.length-times次
+  {
+if (arr[i-1]&gt;arr[i]){
+temp=arr[i-1]
+arr[i-1]=arr[i] 
+arr[i]=temp
+}
+  }
+}
+  }
+</code></pre></blockquote>
+<h1 id="2-选择排序（Select-Sort）"><a href="#2-选择排序（Select-Sort）" class="headerlink" title="2.选择排序（Select Sort）"></a>2.选择排序（Select Sort）</h1><blockquote>
+<p>用某一位置的元素依次与其它位置元素相比较。直接选择排序是不稳定的，算法平均时间复杂度是O(n^2)。<br>  基本思想：<br>  （1）第一轮比较完毕，出现最小值，第二轮比较完毕，出现次小值……</p>
+<p>  （2）与冒泡算法一样，若有N个元素进行排序，一共比较N-1轮，第M轮要进行N-M次比较,但是每一轮只交换一次数值</p>
+<p>  （3）代码实现：</p>
+</blockquote>
+<blockquote>
+<pre><code>static void SelectSort(int[] arr){
+for (int times=0,times&lt;=arr.length-1,times++)  //以索引为0的元素作为第一个元素，依次与其它元素进行比较。
+{
+  int minindex=times
+  for (int i=times+1,i&lt;=arr.length,i++)  //i代表索引为i的被比较元素，可以取到arr.length。
+  {
+if (arr[i]&lt;arr[minindex]){
+minindex=i }
+  }
+  temp=arr[times]
+  arr[times]=arr[minindex] 
+  arr[minindex]=temp
+}
+  }
+</code></pre></blockquote>
+<h1 id="3-快速排序"><a href="#3-快速排序" class="headerlink" title="3.快速排序"></a>3.快速排序</h1><blockquote>
+<p>快速排序是对冒泡排序的一种改进。<br>  快速排序是不稳定的。最理想情况算法时间复杂度O(nlog2n)，最坏O(n ^2)。<br>  基本思想：<br>  （1）首先任意选择一个元素作为初始元素key（一般取第一个元素）</p>
+<p>  （2）从两端开始分别找：从右往左，寻找比key值小的元素交换位置；再从左往右，寻找比key值大的元素交换位置；</p>
+<p>  （3）如此依次循环步骤1.2</p>
+<p>   (4)代码实现：</p>
+</blockquote>
+<blockquote>
+<pre><code>void quicksort(int left,int right)  
+{  
+if(left&gt;right) return ;  
+else  
+{  
+int i=left;  
+int j=right;  
+T t;  
+T temp=data[left];  
+while(i!=j)  
+{  
+while(i&lt;j&amp;&amp;data[j]&gt;=temp) j--;  //记住必须先动j   
+while(i&lt;j&amp;&amp;data[i]&lt;=temp) i++;  
+if(i!=j) swap(i,j);  //原地交换   
+}  
+swap(left,i);  
+quicksort(left,i-1);  
+quicksort(i+1,right);   
+}  
+}  
+</code></pre></blockquote>
+<h1 id="4-堆排序"><a href="#4-堆排序" class="headerlink" title="4.堆排序"></a>4.堆排序</h1><blockquote>
+<p>堆排序是一种树形选择排序。<br>  堆排序的时间复杂度为O(n*log(n))， 非稳定排序，原地排序(空间复杂度O(1))。</p>
+<blockquote>
+<p>基本思想：分为最大化堆和最小化堆。</p>
+</blockquote>
+<p> 第1趟将索引0至n-1处的全部数据建大顶(或小顶)堆，就可以选出这组数据的最大值(或最小值)。将该堆的根节点与这组数据的最后一个节点交换，就使的这组数据中最大(最小)值排在了最后。</p>
+<p>第2趟将索引0至n-2处的全部数据建大顶(或小顶)堆，就可以选出这组数据的最大值(或最小值)。将该堆的根节点与这组数据的倒数第二个节点交换，就使的这组数据中最大(最小)值排在了倒数第2位。</p>
+<p>…</p>
+<p>第k趟将索引0至n-k处的全部数据建大顶(或小顶)堆，就可以选出这组数据的最大值(或最小值)。将该堆的根节点与这组数据的倒数第k个节点交换，就使的这组数据中最大(最小)值排在了倒数第k位。</p>
+</blockquote>
+<blockquote>
+<p> 代码实现</p>
+</blockquote>
+<pre><code>#include&lt;memory.h&gt;
+#include&lt;stdio.h&gt;
+#include&lt;stdlib.h&gt;
+void swap(void* x, void* y, size_t sz) {
+void* t = malloc(sz);
+memcpy(t, x, sz);
+memcpy(x, y, sz);
+memcpy(y, t, sz);
+free(t);
+}
+void makeHeap(void* x, int i, int n, size_t sz, int(*cmp)(const void*, const void*)) {
+char* y = (char*)x;
+int l = 2 * i + 1;
+int r = 2 * i + 2;
+int m;
+if (l&lt;n &amp;&amp; (*cmp)(y + l*sz, y + i*sz)&gt;0) m = l;
+else m = i;
+if (r&lt;n &amp;&amp; (*cmp)(y + r*sz, y + m*sz)&gt;0) m = r;
+if (m != i){
+swap(y + i*sz, y + m*sz, sz);
+makeHeap(x, m, n, sz, cmp);
+}
+}
+void buildHeap(void* x, int n, size_t sz, int(*cmp)(const void*, const void*)) {
+for (int i = n / 2 - 1; i &gt;= 0; i--) makeHeap(x, i, n, sz, cmp);
+}
+void heapSort(void* x, int n, size_t sz, int(*cmp)(const void*, const void*)) {
+buildHeap(x, n, sz, cmp);
+char* y = (char*)x;
+for (int i = n - 1; i &gt;= 1; i--){
+swap(y, y + i*sz, sz);
+makeHeap(x, 0, --n, sz, cmp);
+}
+}
+
+void p(int* x,int n){
+for (int k = 0; k &lt; n; k++){
+printf(&quot;%d &quot;, x[k]);
+}
+printf(&quot;\n&quot;);
+}
+
+int less(const void* a, const void* b){
+return *((int*)a) &lt; *((int*)b);
+}
+int greater(const void* a, const void* b){
+return *((int*)a) *((int*)b);
+}
+int main(){
+int x[] = { 2, 3, 4, 6, 8, 2, 9, 0 };
+// 降序全排列
+heapSort(x, 8, sizeof(int), less);
+p(x, 8);
+// 升序全排列
+heapSort(x, 8, sizeof(int), greater);
+p(x, 8);
+// 最大的4个元素，在数组末尾
+heapSort(x, 4, sizeof(int), less);
+p(x, 8);
+}
+</code></pre><h1 id="5-归并排序"><a href="#5-归并排序" class="headerlink" title="5.归并排序"></a>5.归并排序</h1><blockquote>
+<p>是建立在归并操作上的一种有效的排序算法。</p>
+<p>该算法是采用分治法（Divide and Conquer）的一个非常典型的应用。</p>
+<p>算法时间复杂度可以达到O(n)</p>
+<p>代码实现</p>
+</blockquote>
+<pre><code>void mergearray(int a[], int first, int mid, int last, int temp[])  
+{  
+int i = first, j = mid + 1;  
+int m = mid,   n = last;  
+int k = 0;  
+
+while (i &lt;= m &amp;&amp; j &lt;= n)  
+{  
+if (a[i] &lt;= a[j])  
+temp[k++] = a[i++];  
+else  
+temp[k++] = a[j++];  
+}  
+
+while (i &lt;= m)  
+temp[k++] = a[i++];  
+
+while (j &lt;= n)  
+temp[k++] = a[j++];  
+
+for (i = 0; i &lt; k; i++)  
+a[first + i] = temp[i];  
+}  
+void mergesort(int a[], int first, int last, int temp[])  
+{  
+if (first &lt; last)  
+{  
+int mid = (first + last) / 2;  
+mergesort(a, first, mid, temp);//左边有序  
+mergesort(a, mid + 1, last, temp); //右边有序  
+mergearray(a, first, mid, last, temp); //再将二个有序数列合并  
+}  
+}  
+
+bool MergeSort(int a[], int n)  
+{  
+int *p = new int[n];  
+if (p == NULL)  
+return false;  
+mergesort(a, 0, n - 1, p);  
+delete[] p;  
+return true;  
+}  
+</code></pre><blockquote>
+</blockquote>
+<p><strong>参考文章</strong></p>
+<ol>
+<li><p><a href="https://www.jianshu.com/p/a64aa70d0fbc" target="_blank" rel="noopener">2017校招数据分析岗笔试/面试知识点</a></p>
+</li>
+<li><p><a href="https://blog.csdn.net/ltyqljhwcm/article/details/52145746" target="_blank" rel="noopener">快速排序全面讲解（含复杂度证明）——即将引出八大排序算法</a></p>
+</li>
+<li><p><a href="https://blog.csdn.net/yuehailin/article/details/68961304" target="_blank" rel="noopener">白话经典算法系列之五 归并排序的实现（讲的真好）</a></p>
+</li>
+<li><p><a href="https://blog.csdn.net/lzuacm/article/details/52853194" target="_blank" rel="noopener">堆排序原理及其实现(C++)</a></p>
+</li>
+</ol>
+
+      
+    </div>
+    
+    
+    
+
+	<div>
+  
+    ﻿<div>
+    
+        <div style="text-align:center;color: #ccc;font-size:14px;">------------------本文结束<i class="fa fa-paw"></i>感谢您的阅读------------------</div>
+    
+</div>
+  
+</div>
+
+    
+
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div>坚持原创技术分享，您的支持将鼓励我继续创作！</div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>打赏</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/images/wechatpay.jpg" alt="Hailin 微信支付"/>
+        <p>微信支付</p>
+      </div>
+    
+
+    
+      <div id="alipay" style="display: inline-block">
+        <img id="alipay_qr" src="/images/alipay.jpg" alt="Hailin 支付宝"/>
+        <p>支付宝</p>
+      </div>
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+      <div>
+        <ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者：</strong>
+    Hailin
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="http://wanghailin.info/2018/03/20/2018-03-20-data-analyst-interview-algorithm/" title="数据分析之路|面试题整理之常见算法篇">http://wanghailin.info/2018/03/20/2018-03-20-data-analyst-interview-algorithm/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>
+    本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+
+      </div>
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/数据分析/" rel="tag"> <i class="fa fa-tag"></i> 数据分析</a>
+          
+            <a href="/tags/算法/" rel="tag"> <i class="fa fa-tag"></i> 算法</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/03/19/2018-03-19-data-analyst-interview-statistics/" rel="next" title="数据分析之路|面试题整理之统计学基础">
+                <i class="fa fa-chevron-left"></i> 数据分析之路|面试题整理之统计学基础
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/03/31/2018-03-31-pdf-to-word/" rel="prev" title="《Pytho大法好》之一：批量PDF转Word">
+                《Pytho大法好》之一：批量PDF转Word <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+        <!-- JiaThis Button BEGIN -->
+<div class="jiathis_style">
+<span class="jiathis_txt">分享到：</span>
+<a class="jiathis_button_fav">收藏夹</a>
+<a class="jiathis_button_copy">复制网址</a>
+<a class="jiathis_button_email">邮件</a>
+<a class="jiathis_button_weixin">微信</a>
+<a class="jiathis_button_qzone">QQ空间</a>
+<a class="jiathis_button_tqq">腾讯微博</a>
+<a class="jiathis_button_douban">豆瓣</a>
+<a class="jiathis_button_share">一键分享</a>
+
+<a href="http://www.jiathis.com/share?uid=2140465" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis" target="_blank">更多</a>
+<a class="jiathis_counter_style"></a>
+</div>
+<script type="text/javascript" >
+var jiathis_config={
+  data_track_clickback:true,
+  summary:"",
+  shortUrl:false,
+  hideMore:false
+}
+</script>
+<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=" charset="utf-8"></script>
+<!-- JiaThis Button END -->
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/images/avatar.png"
+                alt="Hailin" />
+            
+              <p class="site-author-name" itemprop="name">Hailin</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">12</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">5</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">15</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/Taolity" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:hailln@163.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://twitter.com/modaochi" target="_blank" title="Twitter">
+                      
+                        <i class="fa fa-fw fa-twitter"></i>Twitter</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="http://www.zhihu.com/people/wang-can-23-70" target="_blank" title="知乎">
+                      
+                        <i class="fa fa-fw fa-globe"></i>知乎</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#几种常见排序算法及实现"><span class="nav-number">1.</span> <span class="nav-text">几种常见排序算法及实现</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#1-冒泡排序（Bubble-Sort）"><span class="nav-number">2.</span> <span class="nav-text">1.冒泡排序（Bubble Sort）</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-选择排序（Select-Sort）"><span class="nav-number">3.</span> <span class="nav-text">2.选择排序（Select Sort）</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#3-快速排序"><span class="nav-number">4.</span> <span class="nav-text">3.快速排序</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#4-堆排序"><span class="nav-number">5.</span> <span class="nav-text">4.堆排序</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#5-归并排序"><span class="nav-number">6.</span> <span class="nav-text">5.归并排序</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+        <div class="back-to-top">
+          <i class="fa fa-arrow-up"></i>
+          
+        </div>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Hailin</span>
+
+  
+</div>
+
+
+ <!-- <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Pisces</a> v5.1.4</div>
+-->
+
+
+
+
+
+<div class="theme-info">
+  <div class="powered-by"></div>
+  <span class="post-count">博客全站共22.6k字</span>
+</div>
+        
+<div class="busuanzi-count">
+  <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="site-uv">
+      本站访客数 <i class="fa fa-user"></i>
+      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+      人次
+    </span>
+  
+
+  
+    <span class="site-pv">
+      本站总访问量 <i class="fa fa-eye"></i>
+      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+      次
+    </span>
+  
+</div>
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+  
+
+
+  
+
+  
+
+</body>
+</html>
+
+<!-- ҳ����С���� -->
+<script type="text/javascript" src="/js/src/love.js"></script>
